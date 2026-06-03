@@ -4,7 +4,7 @@ LingReason contains code for generating structured linguistic reasoning traces f
 
 This repository accompanies our paper: [Reasoning over Grammar: Can Synthetic Linguistic Reasoning Traces Enhance Low-Resource Machine Translation?](https://arxiv.org/abs/2606.03782)
 
-This public release only include Chintang (`ctn`) and Classical Armenian (`xcl`). The resource files for Xibe (`xcl`) and relevant code are excluded due to copyright restrictions.
+This public release only include Chintang (`ctn`) and Classical Armenian (`xcl`). The resource files (and relevant code) for Xibe (`xcl`) are excluded due to copyright restrictions.
 
 ## Example Data
 
@@ -18,8 +18,6 @@ The `data/` directory contains generated Chintang data as examples. These files 
 | `data/ctn_train.json` | SFT/RFT training set with completed linguistic reasoning traces. |
 | `data/ctn_no_thinking_train.json` | SFT training set without reasoning traces. |
 | `data/ctn_test.json` | Test set for direct inference, without linguistic reasoning guides, used for ICL baseline as well as SFT and RFT experiments. |
-
-Classical Armenian generated data is not included in this repository due to file size limit, but can be generated with the same pipeline.
 
 ## Repository Structure
 
