@@ -8,7 +8,7 @@ This public release only include Chintang (`ctn`) and Classical Armenian (`xcl`)
 
 ## Example Data
 
-The `data/` directory contains generated Chintang data as examples. These files were produced with the code in `lingreason/` and can be used directly with the training, inference, and evaluation scripts in `scripts/`.
+The `data/` directory contains generated Chintang data as examples (`xcl` data not included due to file size limit). These files were produced with the code in `lingreason/` and can be used directly with the training, inference, and evaluation scripts in `scripts/`.
 
 | File | Description |
 | --- | --- |
