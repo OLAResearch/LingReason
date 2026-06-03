@@ -4,7 +4,7 @@ LingReason contains code for generating structured linguistic reasoning traces f
 
 This repository accompanies our paper: [Reasoning over Grammar: Can Synthetic Linguistic Reasoning Traces Enhance Low-Resource Machine Translation?](https://arxiv.org/abs/2606.03782)
 
-This public release only include Chintang (`ctn`) and Classical Armenian (`xcl`). Xibe/Manchu-specific code and dictionary components are excluded due to copyright restrictions.
+This public release only include Chintang (`ctn`) and Classical Armenian (`xcl`). The resource files for Xibe (`xcl`) and relevant code are excluded due to copyright restrictions.
 
 ## Example Data
 
