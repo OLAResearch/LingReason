@@ -1,0 +1,1951 @@
+[
+  {
+    "id": "CTN_INDEX_NOMINALIZER_CLITICS",
+    "rule_text": "Nominalizers =go and =kha are written immediately after the items over which they have scope without whitespace and can take case suffixes.",
+    "triggers": {
+      "lemma": [
+        "go",
+        "kha"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Tokenization and Word Segmentation > nominalizer clitics"
+    },
+    "example": [
+      "mikhabe=mi + khabe?on the small one?"
+    ]
+  },
+  {
+    "id": "CTN_INDEX_INFSTRUCT_CLITICS",
+    "rule_text": "Information-structure particles, including focus particles ta and ai, topic particles le, lo, and yaŋ, and unique delimiter te, are written directly after the items over which they have scope without whitespace.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "feats": {
+        "InfStruct": [
+          "Foc",
+          "Top",
+          "Uniq"
+        ]
+      },
+      "lemma": [
+        "ta",
+        "ai",
+        "le",
+        "lo",
+        "yaŋ",
+        "te"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Tokenization and Word Segmentation > information-structure particles"
+    },
+    "example": [
+      "menuwale=menuwa + le?only the cat?"
+    ]
+  },
+  {
+    "id": "CTN_INDEX_CITATIVE_MO",
+    "rule_text": "Citative mo follows the quoted expression without whitespace.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "lemma": [
+        "mo"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Tokenization and Word Segmentation > citative mo"
+    },
+    "example": [
+      "Bedi thu?mamo mitta?seh?.?I thought of smoking a cigarette.?"
+    ]
+  },
+  {
+    "id": "CTN_INDEX_REPORTATIVE_PHO",
+    "rule_text": "Reportative pho follows the reported clause without whitespace.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "lemma": [
+        "pho"
+      ],
+      "feats": {
+        "Evident": [
+          "Nfh"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Tokenization and Word Segmentation > reportative pho"
+    },
+    "example": [
+      "Biu emada?sepho.?I heard the seed has remained fruitless.?"
+    ]
+  },
+  {
+    "id": "CTN_INDEX_NEUTRAL_QUESTION_NCHI",
+    "rule_text": "Neutral question nchi is written at the end of a clause without whitespace.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "lemma": [
+        "nchi"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Tokenization and Word Segmentation > neutral question nchi"
+    },
+    "example": [
+      "Didi?a nunu kok pidenchi??Did that girl give food to the baby or not??"
+    ]
+  },
+  {
+    "id": "CTN_INDEX_AUX_LUS",
+    "rule_text": "Chintang has just one auxiliary verb (AUX), lus ('speak, feel, be felt'). The auxiliary combines with the dedicated reciprocal form of the verb.",
+    "triggers": {
+      "upos": [
+        "AUX"
+      ],
+      "lemma": [
+        "lus"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Morphology > Tags > AUX"
+    },
+    "example": []
+  },
+  {
+    "id": "CTN_INDEX_DET_INTERROGATIVES",
+    "rule_text": "The DET tag applies to interrogatives asuk, them, and themma. Determiners do not have Case marking on them.",
+    "triggers": {
+      "upos": [
+        "DET"
+      ],
+      "feats": {
+        "PronType": [
+          "Int"
+        ]
+      },
+      "lemma": [
+        "asuk",
+        "them",
+        "themma"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Morphology > Tags > DET interrogatives"
+    },
+    "example": []
+  },
+  {
+    "id": "CTN_INDEX_NSUBJ_ABS",
+    "rule_text": "The sole argument of intransitive predicates (the intransitive subject) takes the Absolutive case (-0, Case=Abs).",
+    "triggers": {
+      "deprel": [
+        "nsubj"
+      ],
+      "feats": {
+        "Case": [
+          "Abs"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Syntax > Core Arguments > intransitive subject"
+    },
+    "example": []
+  },
+  {
+    "id": "CTN_INDEX_NSUBJ_ERG",
+    "rule_text": "The agent argument of transitive predicates (the transitive subject) takes the Ergative case (-?a, Case=Erg).",
+    "triggers": {
+      "deprel": [
+        "nsubj"
+      ],
+      "feats": {
+        "Case": [
+          "Erg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Syntax > Core Arguments > transitive subject"
+    },
+    "example": []
+  },
+  {
+    "id": "CTN_INDEX_OBJ_ABS",
+    "rule_text": "For transitive predicates, the patient (or the direct object obj) typically occurs in second position. It has the Absolutive case marking and lacks postpositions.",
+    "triggers": {
+      "deprel": [
+        "obj"
+      ],
+      "feats": {
+        "Case": [
+          "Abs"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Syntax > Core Arguments > object"
+    },
+    "example": []
+  },
+  {
+    "id": "CTN_INDEX_OBL_NONCORE",
+    "rule_text": "Adjuncts (obl) are postpositional phrases or bare nominals marked with cases other than Absolutive or Ergative.",
+    "triggers": {
+      "deprel": [
+        "obl"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Syntax > Core Arguments > oblique adjuncts"
+    },
+    "example": []
+  },
+  {
+    "id": "CTN_INDEX_NEGATIVE_NONVERBAL_ADVMOD_COP",
+    "rule_text": "Negative non-verbal clauses of all types are marked by negative verboids: mah???be not?, manchi??be not there?, mane?should not?, and phophei??be no longer there? (tagged PART and annotated with advmod:cop).\nChintang has several verboids that occur in negative copular constructions, such as mahãʔ “be not”, manchiʔ “be not there”, mane “should not”, and phopheiʔ “be no longer there”. These verboids cannot be annotated as cop, since they contribute additional semantic content (negative polarity) and therefore are not pure copulas. Instead, the advmod:cop relation is used to mark their copular-like function, emphasizing their role as adverbial modifiers within the predicate rather than as true copulas.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "deprel": [
+        "advmod:cop"
+      ],
+      "feats": {
+        "Polarity": [
+          "Neg"
+        ]
+      },
+      "lemma": [
+        "mahãʔ",
+        "manchiʔ",
+        "mane",
+        "phopheiʔ"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/index.html",
+      "section": "Syntax > Non-verbal Clauses > negative non-verbal clauses"
+    },
+    "example": [
+      "Igol mahaʔ mo go. \\n Your_ball be_not down_there NMLZ. advmod:cop(Igol, mahaʔ) advmod:cop(Your_ball, be_not) det:nmlz(go, mo) det:nmlz(NMLZ, down_there) nsubj(Igol, go) nsubj(Your_ball, NMLZ)"
+    ]
+  },
+  {
+    "id": "CTN_ADVTYPE_LOC",
+    "rule_text": "Loc (locative): Demonstrative roots ba “PROX”, huĩ “MED”, mo “DEM.DOWN”, to “DEM.UP”, and yo “DEM.LVL”, when used with the locative Case marking.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ],
+      "feats": {
+        "AdvType": [
+          "Loc"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/AdvType.html",
+      "section": "Loc (locative)"
+    },
+    "example": [
+      "bai “here”, huĩsaiʔ “there”",
+      "umu “right down there”, uttu “right up there”, uyuta “right there”",
+      "ammu “way down there”, attu “way up there”, aiyu “over there”"
+    ]
+  },
+  {
+    "id": "CTN_ADVTYPE_MAN",
+    "rule_text": "Man (manner): Marked by the demonstrative modal case -khiʔ, -ʌso, or demonstrative method case -khiʔnɨŋ, -ʌsʌri.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ],
+      "feats": {
+        "AdvType": [
+          "Man"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/AdvType.html",
+      "section": "Man (manner)"
+    },
+    "example": [
+      "huŋkhi “like that”, joso “however”",
+      "hokhiʔni “how”, josoriyaŋ “any way”"
+    ]
+  },
+  {
+    "id": "CTN_ADVTYPE_EXT",
+    "rule_text": "Ext (extension): Marked by the extensional -tta, which denotes the same size as a referent in the area demarcated by the demonstrative base.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ],
+      "feats": {
+        "AdvType": [
+          "Ext"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/AdvType.html",
+      "section": "Ext (extension)"
+    },
+    "example": [
+      "batta “as big as this”, motta “as big as down there”, atta “how big”."
+    ]
+  },
+  {
+    "id": "CTN_ADVTYPE_QUA",
+    "rule_text": "Qua (quantifier): Marked by the extensional -ʌti, which denotes the same quantity as a referent in the area demarcated by the demonstrative base.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ],
+      "feats": {
+        "AdvType": [
+          "Qua"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/AdvType.html",
+      "section": "Qua (quantifier)"
+    },
+    "example": [
+      "utti “that much”, katti “how much”"
+    ]
+  },
+  {
+    "id": "CTN_ASPECT_IMP",
+    "rule_text": "Imp (imperfective): The action took / takes / will take some time span and there is no information whether and when it was / will be completed. Imperfective is typically zero-marked on non-past verb forms.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "Imp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Aspect.html",
+      "section": "Imp (imperfective)"
+    },
+    "example": [
+      "Tanno. “She’ll jump.” / “She’s jumping.” / “She jumps (habitually).”",
+      "Pinda kt e. “He was running.” / “He used to run.”"
+    ]
+  },
+  {
+    "id": "CTN_ASPECT_PERF",
+    "rule_text": "Perf (perfect): The past action with present relevance, or a present state resulting from a past situation.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "Perf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Aspect.html",
+      "section": "Perf (perfect)"
+    },
+    "example": [
+      "Thaba ŋs eʔ. “She has come over.”"
+    ]
+  },
+  {
+    "id": "CTN_ASPECT_PERFV",
+    "rule_text": "Perfv (perfective): The action is viewed as a simple whole. Perfective is zero-marked on the imperative of past verb forms.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "Perfv"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Aspect.html",
+      "section": "Perfv (perfective)"
+    },
+    "example": [
+      "Yuaʔ! “Sit down!”",
+      "Ukhatte. “They took it away.”"
+    ]
+  },
+  {
+    "id": "CTN_ASPECT_COMPLIMP",
+    "rule_text": "ComplImp (completive imperfective): The combination of completive (the action was / is / will be completed) and imperfective aspects.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "ComplImp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Aspect.html",
+      "section": "ComplImp (completive imperfective)"
+    },
+    "example": [
+      "Co hatt u wakt uce. “He used to eat them up.”"
+    ]
+  },
+  {
+    "id": "CTN_ASPECT_COMPLPERF",
+    "rule_text": "ComplPerf (completive perfect): The combination of completive (the action was / is / will be completed) and perfect aspects.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "ComplPerf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Aspect.html",
+      "section": "ComplPerf (completive perfect)"
+    },
+    "example": [
+      "Seda nd o ŋs e. “He has killed it.”"
+    ]
+  },
+  {
+    "id": "CTN_ASPECT_COMPLPERFV",
+    "rule_text": "ComplPerfv (completive perfective): The combination of completive (the action was / is / will be completed) and perfective aspects.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "ComplPerfv"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Aspect.html",
+      "section": "ComplPerfv (completive perfective)"
+    },
+    "example": [
+      "Loĩsa nd e. “He let it out.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_ABS",
+    "rule_text": "Abs (absolutive): The absolutive case marks the sole argument of intransitive verbs and the patient of transitive verbs. The case is overtly marked only on sa “who”.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "Abs"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "Abs (absolutive)"
+    },
+    "example": [
+      "Ba khimbe salo yuŋno? “ Who lives in this house?”",
+      "Rameŋata biskut cohatte. “Ram ate up the cookie.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_ERG",
+    "rule_text": "Erg (ergative): The ergative case marks the agent of transitive verbs.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "Erg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "Erg (ergative)"
+    },
+    "example": [
+      "Rameŋata biskut cohatte. “ Ram ate up the cookie.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOC",
+    "rule_text": "Loc (locative): The locative case marks a spatial relation. In Chintang, several distinct locative cases exist, each specifying a different type of location.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "Loc"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "Loc (locative)"
+    },
+    "example": [
+      "Ba khimbe salo yuŋno? “Who lives in this house?”",
+      "Abo huŋgo khimbaiʔni khaccone. “Now let’s take that home.”",
+      "Khambamu thia, Kancha. “Come down on the floor, Kancha.”",
+      "To Saĩlicebanduya ŋ kattepho. “He brought it up to Saĩli and the others as well.”",
+      "Khimbayukta dinbhori yuŋno hola. “Maybe he stays over at his house the whole day.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_COM",
+    "rule_text": "Com (comitative): The comitative case marks a referent that forms a couple or group with another and that occupies the same role as it. It corresponds to English “together with …”",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "Com"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "Com (comitative)"
+    },
+    "example": [
+      "Yakkheŋ ucuwanɨŋ thaptei! “Bring the curry together with its gravy!”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_CAU",
+    "rule_text": "Cau (causative): Nouns in this case express the cause or purpose of something. The case can mostly be translated into English as “for”.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "Cau"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "Cau (causative)"
+    },
+    "example": [
+      "Huĩ camyaŋtoŋ na maha. “That’s not (meant) for eating.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_PER",
+    "rule_text": "Per (perlative): The perlative case denotes movement along something, spaces that are passed by or through.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "Per"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "Per (perlative)"
+    },
+    "example": [
+      "Elo Dharanlam kina moʔni athano? “Or do you go down there via Dharan?”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_ABSERG",
+    "rule_text": "AbsErg (absolutive + ergative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "AbsErg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "AbsErg (absolutive + ergative)"
+    },
+    "example": [
+      "Makku, saloŋa eti camacalo chubulottoŋse? “Auntie, who has grabbed (and taken away) so much rice?”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCCOM",
+    "rule_text": "LocCom (locative + comitative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocCom"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocCom (locative + comitative)"
+    },
+    "example": [
+      "Lo, basaŋa na baiʔ latto, huĩ sontoloŋtaŋbeʔnɨŋ to khãbobeʔnɨŋ. “Okay, this one should be (long) enough here (to reach) to the crown of the tangerine tree and up to the stem.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCERG",
+    "rule_text": "LocErg (locative + ergative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocErg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocErg (locative + ergative)"
+    },
+    "example": [
+      "Cuwaiʔyã taduŋcɨŋ. “I’ll bring them from the well.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCLOC",
+    "rule_text": "LocLoc (locative + locative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocLoc"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocLoc (locative + locative)"
+    },
+    "example": [
+      "Mo khetabhamuʔni londaŋsaŋkhau. “I am on my way to the field down there.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCLOCERG",
+    "rule_text": "LocLocErg (locative + locative + ergative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocLocErg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocLocErg (locative + locative + ergative)"
+    },
+    "example": [
+      "Akka topattiʔyã tadusuŋkhalo naŋ. “I’ve brought it from upside.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCLOCPER",
+    "rule_text": "LocLocPer (locative + locative + perlative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocLocPer"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocLocPer (locative + locative + perlative)"
+    },
+    "example": [
+      "Rodbeyã thoreʔ bhamuʔnilamta e? “From the road, a little more along this way down here, no?”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCPER",
+    "rule_text": "LocPer (locative + perlative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocPer"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocPer (locative + perlative)"
+    },
+    "example": [
+      "Utti yarita na akka bhaiʔlam pindehẽ. “That time I ran this way.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_LOCPERERG",
+    "rule_text": "LocPerErg (locative + perlative + ergative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "LocPerErg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "LocPerErg (locative + perlative + ergative)"
+    },
+    "example": [
+      "Khoi, bhamulammayaŋ dhuŋga lonno. “I don’t know, from down here smoke is rising, too.”"
+    ]
+  },
+  {
+    "id": "CTN_CASE_PERERG",
+    "rule_text": "PerErg (perlative + ergative) is a documented value of Case in Chintang.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PRON",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "ADV"
+      ],
+      "feats": {
+        "Case": [
+          "PerErg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Case.html",
+      "section": "PerErg (perlative + ergative)"
+    },
+    "example": [
+      "Budahaŋlamma. “ From Budhahang’s side.”"
+    ]
+  },
+  {
+    "id": "CTN_CLUSIVITY_EX",
+    "rule_text": "Ex (exclusive) is a documented value of Clusivity in Chintang.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "VERB",
+        "NOUN"
+      ],
+      "feats": {
+        "Clusivity": [
+          "Ex"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Clusivity.html",
+      "section": "Ex (exclusive)"
+    },
+    "example": [
+      "anca ŋa “we (I + he/she)”; ana ŋa “we (I + they)”",
+      "pindi ŋa hẽ “we (I + they) ran away”"
+    ]
+  },
+  {
+    "id": "CTN_CLUSIVITY_IN",
+    "rule_text": "In (inclusive) is a documented value of Clusivity in Chintang.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "VERB",
+        "NOUN"
+      ],
+      "feats": {
+        "Clusivity": [
+          "In"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Clusivity.html",
+      "section": "In (inclusive)"
+    },
+    "example": [
+      "anci “we (I + you)”; ani “we (I + you + they)”",
+      "rɨktaloĩsace “we chased it out”"
+    ]
+  },
+  {
+    "id": "CTN_CLUSIVITY_P__EX",
+    "rule_text": "Ex (exclusive) is a documented value of Clusivity[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Clusivity[p]": [
+          "Ex"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Clusivity-p.html",
+      "section": "Ex (exclusive)"
+    },
+    "example": [
+      "mapide “(he) gave us (I + they)”"
+    ]
+  },
+  {
+    "id": "CTN_CLUSIVITY_P__IN",
+    "rule_text": "In (inclusive) is a documented value of Clusivity[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Clusivity[p]": [
+          "In"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Clusivity-p.html",
+      "section": "In (inclusive)"
+    },
+    "example": [
+      "mailunoʔ “(he) will tell us (I + you + they)”"
+    ]
+  },
+  {
+    "id": "CTN_CONVTYPE_CNTF",
+    "rule_text": "Cntf (counterfactual): The suffix -i marks converbs heading a counterfactual equative clause.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "ConvType": [
+          "Cntf"
+        ]
+      },
+      "lemma": [
+        "i"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/ConvType.html",
+      "section": "Cntf (counterfactual)"
+    },
+    "example": [
+      "Eb i likhilo nɨŋno. “It looks as if he were standing.”"
+    ]
+  },
+  {
+    "id": "CTN_CONVTYPE_COORD",
+    "rule_text": "Coord (coordinated action): The suffix -saŋa marks a coordinated action.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "ConvType": [
+          "Coord"
+        ]
+      },
+      "lemma": [
+        "saŋa"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/ConvType.html",
+      "section": "Coord (coordinated action)"
+    },
+    "example": [
+      "Khu saŋa ta thaptummehẽ. “We brought him here by carrying him.”"
+    ]
+  },
+  {
+    "id": "CTN_CONVTYPE_PURP",
+    "rule_text": "Purp (purposive): The suffix -si marks an action that takes place at the endpoint of a movement and is its purpose.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "ConvType": [
+          "Purp"
+        ]
+      },
+      "lemma": [
+        "si"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/ConvType.html",
+      "section": "Purp (purposive)"
+    },
+    "example": [
+      "Hokkoiʔ phuŋ pus si akhadiki? “Where do you go to pick flowers?”"
+    ]
+  },
+  {
+    "id": "CTN_INFSTRUCT_FOC",
+    "rule_text": "Foc (focus): The endoclitics =ta, =lo, =le, and =yaŋ serve to mark different kinds of focus. The focused constituent signals the sole contrast between two propositions: a base proposition, which is contextually available and presumed to be true or likely to become true, and an actual proposition, which forms the basis of the speaker’s utterance and corrects the base proposition by substituting the corresponding element with the marked constituent.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "feats": {
+        "InfStruct": [
+          "Foc"
+        ]
+      },
+      "lemma": [
+        "ta",
+        "lo",
+        "le",
+        "yaŋ"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/InfStruct.html",
+      "section": "Foc (focus)"
+    },
+    "example": [
+      "Chaŋa menuwa ta rɨktoko. “The child is chasing THE CAT (not what you thought)”. – contrastive focus",
+      "Chaŋa menuwa lo rɨktoko. “The child is chasing THE CAT (not what I thought)”. – surprise focus",
+      "Chaŋa menuwa le rɨktoko. “The child is only chasing THE CAT”. – restrictive focus",
+      "Chaŋa menuwa yaŋ rɨktoko. “The child is also chasing THE CAT”. – additive focus"
+    ]
+  },
+  {
+    "id": "CTN_INFSTRUCT_UNIQ",
+    "rule_text": "Uniq (unique): Like the focus particles, the endoclitic =te can be analyzed as operating with a contrast between a base and an actual proposition. However, the base proposition remains comparatively vague because the base constituent is not filled by a specific referent or circumstance but is assumed to be arbitrary. By contrast, the actual proposition makes it clear that there is only one uniquely identifiable referent or circumstance that matches the context.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "feats": {
+        "InfStruct": [
+          "Uniq"
+        ]
+      },
+      "lemma": [
+        "te"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/InfStruct.html",
+      "section": "Uniq (unique)"
+    },
+    "example": [
+      "Thego te labaŋbidahãʔna o. “Grab the BIG one for me, okay?”"
+    ]
+  },
+  {
+    "id": "CTN_INFSTRUCT_TOP",
+    "rule_text": "Top (topic): Chintang has two topic-marking particles: the Nepali loanword caĩ and the native particle na. The particle caĩ indicates a contrastive topic, responding to the listener’s specific expectations about which constituent should be topical in the discourse. The particle na presupposes that the listener may be unsure about the scope of a particular predicate and explicitly clarifies this relation.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "feats": {
+        "InfStruct": [
+          "Top"
+        ]
+      },
+      "lemma": [
+        "caĩ",
+        "na"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/InfStruct.html",
+      "section": "Top (topic)"
+    },
+    "example": [
+      "Chace caĩ, ukhade. “As for the kids, they have gone.”",
+      "Chace na, ukhade. “As for the kids, they have gone.”"
+    ]
+  },
+  {
+    "id": "CTN_MOOD_IND",
+    "rule_text": "Ind (indicative): The indicative can be considered the default mood. A verb in indicative merely states that something happens, has happened or will happen, without adding any attitude of the speaker.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Mood": [
+          "Ind"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Mood.html",
+      "section": "Ind (indicative)"
+    },
+    "example": [
+      "Bharkhari nam lonno. “The sun is just coming up.”"
+    ]
+  },
+  {
+    "id": "CTN_MOOD_IMP",
+    "rule_text": "Imp (imperative): The speaker uses imperative to order or ask the addressee to do the action of the verb.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Mood": [
+          "Imp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Mood.html",
+      "section": "Imp (imperative)"
+    },
+    "example": [
+      "Lo, annecenɨŋ khoŋsanihã! “Alright now, play with the older girls!”"
+    ]
+  },
+  {
+    "id": "CTN_MOOD_SUB",
+    "rule_text": "Sub (subjunctive): The subjunctive mood marks statements whose realization depends on abilities, attention, will, or simply on unknown factors",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Mood": [
+          "Sub"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Mood.html",
+      "section": "Sub (subjunctive)"
+    },
+    "example": [
+      "*Aya, akka na kanchaŋa harata ucaiʔyã raicha!* “Oh, Kancha could defeat me!”",
+      "Atham gonei! “Watch out, you may fall!”",
+      "Siyalaã naneklena! “May the jackal bite you!”",
+      "Paĩ weiʔ ta hola. “Maybe it will rain today.”"
+    ]
+  },
+  {
+    "id": "CTN_MOOD_OPT",
+    "rule_text": "Opt (optative): The optative mood expresses that the speaker (and possibly other actants as well) wish for the marked proposition to become true. In Chintang, the optative is a secondary mood, which exclusively attaches to subjunctive forms. Verbs marked with both moods are annotated using the Opt value.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Mood": [
+          "Opt"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Mood.html",
+      "section": "Opt (optative)"
+    },
+    "example": [
+      "Gakkaŋ nisaŋa conena! “Let your younger brother have it later!”"
+    ]
+  },
+  {
+    "id": "CTN_NUMBER_SING",
+    "rule_text": "Sing (singular): A singular denotes one person, animal or thing.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "VERB",
+        "ADJ",
+        "NUM"
+      ],
+      "feats": {
+        "Number": [
+          "Sing"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Number.html",
+      "section": "Sing (singular)"
+    },
+    "example": [
+      "chau “child”",
+      "yo “this over there”",
+      "akka “I”, hana “you (sg.)”",
+      "khaʔnok “he/she is going”"
+    ]
+  },
+  {
+    "id": "CTN_NUMBER_DUAL",
+    "rule_text": "Dual (dual): The dual denotes exactly two persons, animals, or things. The value Dual is not used for nouns or proper nouns, but it appears on personal pronouns, verbs, and possessive prefixes, where a dual–plural distinction is expressed.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "VERB",
+        "ADJ",
+        "NUM"
+      ],
+      "feats": {
+        "Number": [
+          "Dual"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Number.html",
+      "section": "Dual (dual)"
+    },
+    "example": [
+      "anci “we two”, hanci “you two”",
+      "ukhacceke “they two are going”"
+    ]
+  },
+  {
+    "id": "CTN_NUMBER_PLUR",
+    "rule_text": "Plur (plural): The plural denotes more than one person, animal, or thing.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "VERB",
+        "ADJ",
+        "NUM"
+      ],
+      "feats": {
+        "Number": [
+          "Plur"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Number.html",
+      "section": "Plur (plural)"
+    },
+    "example": [
+      "cha ce “children (at least two)”",
+      "yo ce “those (at least two) over there”",
+      "ani “we (more than two)”, hani “you (more than two)”",
+      "ukhaʔnok “they (more than two) are going”"
+    ]
+  },
+  {
+    "id": "CTN_NUMBER_P__SING",
+    "rule_text": "Sing (singular) is a documented value of Number[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Number[p]": [
+          "Sing"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Number-p.html",
+      "section": "Sing (singular)"
+    },
+    "example": [
+      "nakhage “they saw you (singular)”"
+    ]
+  },
+  {
+    "id": "CTN_NUMBER_P__DUAL",
+    "rule_text": "Dual (dual) is a documented value of Number[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Number[p]": [
+          "Dual"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Number-p.html",
+      "section": "Dual (dual)"
+    },
+    "example": [
+      "nakhagace “they saw you (two)”"
+    ]
+  },
+  {
+    "id": "CTN_NUMBER_P__PLUR",
+    "rule_text": "Plur (plural) is a documented value of Number[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Number[p]": [
+          "Plur"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Number-p.html",
+      "section": "Plur (plural)"
+    },
+    "example": [
+      "nakhagihẽ “they saw you (more than two)”"
+    ]
+  },
+  {
+    "id": "CTN_PERSON_P__1",
+    "rule_text": "1 (first person) is a documented value of Person[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Person[p]": [
+          "1"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Person-p.html",
+      "section": "1 (first person)"
+    },
+    "example": [
+      "maikhage “they saw us”"
+    ]
+  },
+  {
+    "id": "CTN_PERSON_P__2",
+    "rule_text": "2 (second person) is a documented value of Person[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Person[p]": [
+          "2"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Person-p.html",
+      "section": "2 (second person)"
+    },
+    "example": [
+      "nakhagihẽ “they saw you”"
+    ]
+  },
+  {
+    "id": "CTN_PERSON_P__3",
+    "rule_text": "3 (third person) is a documented value of Person[p] in Chintang.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Person[p]": [
+          "3"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Person-p.html",
+      "section": "3 (third person)"
+    },
+    "example": [
+      "ukhaguce “they saw them”"
+    ]
+  },
+  {
+    "id": "CTN_REACH_ACCESS",
+    "rule_text": "Access (accessible): Prefix u- “ACCESS” marks locations that are perceived as familiar, frequently visited, and/or easy to access.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ],
+      "feats": {
+        "Reach": [
+          "Access"
+        ]
+      },
+      "lemma": [
+        "u-"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Reach.html",
+      "section": "Access (accessible)"
+    },
+    "example": [
+      "Khaboŋ hoŋku cɨkbe dokanace uyuŋno, umuba thaihẽ. “Next to the river Khabong there are some shops, and we arrived down there.”"
+    ]
+  },
+  {
+    "id": "CTN_REACH_REMOTE",
+    "rule_text": "Remote (remote): Prefix a - “REMOTE” marks locations that are perceived as unfamiliar, unlikely, and/or hard to access.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ],
+      "feats": {
+        "Reach": [
+          "Remote"
+        ]
+      },
+      "lemma": [
+        "a-"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Reach.html",
+      "section": "Remote (remote)"
+    },
+    "example": [
+      "Mo ammu hoŋkubhamu, Khaboŋ hoŋkubhamu thaihẽ. “We arrived down, way down at the river, the river Khabong.”"
+    ]
+  },
+  {
+    "id": "CTN_RED_YES",
+    "rule_text": "Yes (yes) is a documented value of Red in Chintang.",
+    "triggers": {
+      "feats": {
+        "Red": [
+          "Yes"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Red.html",
+      "section": "Yes (yes)"
+    },
+    "example": [
+      "batta daplok miʔmikhakhakha meĩbe “in a small, small thingie, flat and [only] as big as this”",
+      "Thitta-thitta pakku abokada puʔno, mahã? “An older guy is picking avocados one by one, you understand?”",
+      "Akka them-them doŋdum khasɨŋnaʔã. “I will ask you a couple of questions.”"
+    ]
+  },
+  {
+    "id": "CTN_VOICE_ACT",
+    "rule_text": "Act (active): The default voice. The subject of the verb is the agent (the doer of the action), and the object is the patient (the entity affected by the action).",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Voice": [
+          "Act"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Voice.html",
+      "section": "Act (active)"
+    },
+    "example": [
+      "Manaŋthaʔ! “Don’t shake it!”"
+    ]
+  },
+  {
+    "id": "CTN_VOICE_CAU",
+    "rule_text": "Cau (causative): The causative voice increases the valency of the verb by introducing a causer (agent). The original agent becomes the causee, who is now the patient (undergoer). The causative is marked by -mett.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Voice": [
+          "Cau"
+        ]
+      },
+      "lemma": [
+        "mett"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Voice.html",
+      "section": "Cau (causative)"
+    },
+    "example": [
+      "Pecceta Jiteŋa hapmettoŋse. “Jitendra’s made Prithibi cry.”"
+    ]
+  },
+  {
+    "id": "CTN_VOICE_RCP",
+    "rule_text": "Rcp (reciprocal): Used when a plural subject acts both as agents and patients, each performing and receiving the action. The reciprocal is formed by reduplication of the verb stem and the interfix -ka-, used in non-finite reciprocal forms.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Voice": [
+          "Rcp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Voice.html",
+      "section": "Rcp (reciprocal)"
+    },
+    "example": [
+      "Aya, bace na khalli tɨŋkatɨŋta uluceke hou! “Whew, these two kick each other all the time!”"
+    ]
+  },
+  {
+    "id": "CTN_VOICE_RFL",
+    "rule_text": "Rfl (reflexive): The reflexive voice decreases the valency of the verb by one. The subject acts upon itself — the agent and patient are identical. This value is used when the verb has one of the reflexive suffixes: -na (present in all finite forms), -ci (finite singular), or -ncĩ (finite non-singular and non-finite forms).",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Voice": [
+          "Rfl"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Voice.html",
+      "section": "Rfl (reflexive)"
+    },
+    "example": [
+      "Susma caĩ naŋnaʔãce. “Susma is shaking herself.”"
+    ]
+  },
+  {
+    "id": "CTN_VOICE_CAURCP",
+    "rule_text": "CauRcp (causative + reciprocal): Used when the verb carries both causative and reciprocal morphology. This combination does not change the transitivity of the verb. It occurs with plural subjects, where all participants act as causers, agents, and patients, performing the action upon one another.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Voice": [
+          "CauRcp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Voice.html",
+      "section": "CauRcp (causative + reciprocal)"
+    },
+    "example": [
+      "Hapmeiʔkameiʔ luma maha o. “No making each other cry, alright?”"
+    ]
+  },
+  {
+    "id": "CTN_VOICE_CAURFL",
+    "rule_text": "CauRfl (causative + reflexive): Used when the verb carries both causative and reflexive morphology. This combination does not change the transitivity of the verb. It indicates that the causer and causee are the same entity – the subject acts upon itself.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ],
+      "feats": {
+        "Voice": [
+          "CauRfl"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/feat/Voice.html",
+      "section": "CauRfl (causative + reflexive)"
+    },
+    "example": [
+      "Immetnaŋnace, aya! “Oh dear, she’s put herself to sleep!”"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ACL_NMLZ",
+    "rule_text": "Chintang has two nominalizers: =go and =kha. These enclitics derive a nominal base from another form, which can be almost arbitrary. They are annotated as a type of “empty” nominal, functionally similar to English one. The nominalizer serves as the head of the nominalized structure, with the nominalized element modifying it. Depending on the syntactic category of the nominalized element, different dependency relations are used between the nominalizer (the head) and the root of the nominalized scope: acl:nmlz, advmod:nmlz, amod:nmlz, det:nmlz, or nmod:nmlz. In each case, the chosen dependency corresponds to the relation that the same type of modifier would have with a NOUN if it were modifying it directly, with the subtype:nmlz indicating that the relation involves nominalization. When the scope of the nominalization is a clause, the dependency used is acl:nmlz.",
+    "triggers": {
+      "deprel": [
+        "acl:nmlz"
+      ],
+      "lemma": [
+        "go",
+        "kha"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/acl-nmlz.html",
+      "section": "acl:nmlz (clausal nominalization)"
+    },
+    "example": [
+      "Suno gosaŋa na kanimɨksɨlɨk ta siptandoko. \\n Is_sour NMLZ.ERG TOP our_eye FOC closes. acl:nmlz(gosaŋa, Suno) acl:nmlz(NMLZ.ERG, Is_sour) nsubj(siptandoko, gosaŋa) nsubj(closes, NMLZ.ERG)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ADVCL_CNTF",
+    "rule_text": "The dependent of an advcl:cntf relation is a counterfactual comparison adverbial clause, which is headed by a counterfactual converb ( VerbForm=Cnv, ConvType=Cntf ).",
+    "triggers": {
+      "deprel": [
+        "advcl:cntf"
+      ],
+      "dependent_feats": {
+        "VerbForm": [
+          "Conv"
+        ],
+        "ConvType": [
+          "Cntf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/advcl-cntf.html",
+      "section": "advcl:cntf (counterfactual comparison adverbial clause)"
+    },
+    "example": [
+      "Ebi likhi lo nɨŋno. \\n Stand.CNTF like SURP it_seems. advcl:cntf(nɨŋno, Ebi) advcl:cntf(it_seems, Stand.CNTF)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ADVCL_COORD",
+    "rule_text": "The dependent of an advcl:coord relation is a counterfactual comparison adverbial clause, which is headed by a coordinated action converb ( VerbForm=Cnv, ConvType=Coord ).",
+    "triggers": {
+      "deprel": [
+        "advcl:coord"
+      ],
+      "dependent_feats": {
+        "VerbForm": [
+          "Conv"
+        ],
+        "ConvType": [
+          "Coord"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/advcl-coord.html",
+      "section": "advcl:coord (coordinated action adverbial clause)"
+    },
+    "example": [
+      "Khusaŋa ta thaptummehẽ. \\n Carry.CVB.COORD FOC we_brought_him_over. advcl:coord(thaptummehẽ, Khusaŋa) advcl:coord(we_brought_him_over, Carry.CVB.COORD)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ADVCL_EMPH",
+    "rule_text": "The advcl:emph relation is used for predicate doubling – a construction in which the infinitive and the inflected form of the same verb co-occur within a single sentence as part of the information structure marking. In Chintang, this construction is employed to indicate that a particle takes scope only over the lexical component of the predicate. Speakers achieve this by attaching the particle to the infinitive form of the verb stem, followed by a finite form of the same verb. The choice of the advcl:emph subtype reflects the aim of aligning this annotation with that of information-structural particles, which are annotated using advmod:emph.",
+    "triggers": {
+      "deprel": [
+        "advcl:emph"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/advcl-emph.html",
+      "section": "advcl:emph (emphasizing adverbial clause)"
+    },
+    "example": [
+      "Akka na thuŋma taʔ thuŋŋaʔã! \\n I TOP to_drink FOC I_drink! advcl:emph(thuŋŋaʔã, thuŋma) advcl:emph(I_drink, to_drink) advmod:emph(thuŋma, taʔ) advmod:emph(to_drink, FOC)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ADVCL_PURP",
+    "rule_text": "The dependent of an advcl:purp relation is a purposive adverbial clause, which is headed by a purposive converb ( VerbForm=Cnv, ConvType=Purp ).",
+    "triggers": {
+      "deprel": [
+        "advcl:purp"
+      ],
+      "dependent_feats": {
+        "VerbForm": [
+          "Conv"
+        ],
+        "ConvType": [
+          "Purp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/advcl-purp.html",
+      "section": "advcl:purp (purposive adverbial clause)"
+    },
+    "example": [
+      "Baceŋa asessi utiaŋse mo pho. \\n He.ERG my.kill.PURP they_came CIT REP. advcl:purp(utiaŋse, asessi) advcl:purp(they_came, my.kill.PURP)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ADVCL_SIM",
+    "rule_text": "The dependent of an advcl:sim relation is a simultaneous action adverbial clause, which is headed by a verb with the simultaneous aspect -lok.",
+    "triggers": {
+      "deprel": [
+        "advcl:sim"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/advcl-sim.html",
+      "section": "advcl:sim (simultaneous action adverbial clause)"
+    },
+    "example": [
+      "Ghakaŋ kanchi kok pimalok caklet naktucohatto. \\n Later kanchi rice give.INF.SIM candy he_asks_for. advcl:sim(naktucohatto, pimalok) advcl:sim(he_asks_for, give.INF.SIM)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_ADVMOD_NMLZ",
+    "rule_text": "Chintang has two nominalizers: =go and =kha. These enclitics derive a nominal base from another form, which can be almost arbitrary. They are annotated as a type of “empty” nominal, functionally similar to English one. The nominalizer serves as the head of the nominalized structure, with the nominalized element modifying it. Depending on the syntactic category of the nominalized element, different dependency relations are used between the nominalizer (the head) and the root of the nominalized scope: acl:nmlz, advmod:nmlz, amod:nmlz, det:nmlz, or nmod:nmlz. In each case, the chosen dependency corresponds to the relation that the same type of modifier would have with a NOUN if it were modifying it directly, with the subtype:nmlz indicating that the relation involves nominalization. When the scope of the nominalization is an adverb, the dependency used is advmod:nmlz.",
+    "triggers": {
+      "deprel": [
+        "advmod:nmlz"
+      ],
+      "lemma": [
+        "go",
+        "kha"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/advmod-nmlz.html",
+      "section": "advmod:nmlz (adverbial nominalization)"
+    },
+    "example": [
+      "To bhittra goce le uthatno. \\n Up_there inside NMLZ.NSG RESTR they_appear. det(goce, To) det(NMLZ.NSG, Up_there) advmod:nmlz(goce, bhittra) advmod:nmlz(NMLZ.NSG, inside) nsubj(uthatno, goce) nsubj(they_appear, NMLZ.NSG) advmod:emph(goce, le) advmod:emph(NMLZ.NSG, RESTR)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_AMOD_NMLZ",
+    "rule_text": "Chintang has two nominalizers: =go and =kha. These enclitics derive a nominal base from another form, which can be almost arbitrary. They are annotated as a type of “empty” nominal, functionally similar to English one. The nominalizer serves as the head of the nominalized structure, with the nominalized element modifying it. Depending on the syntactic category of the nominalized element, different dependency relations are used between the nominalizer (the head) and the root of the nominalized scope: acl:nmlz, advmod:nmlz, amod:nmlz, det:nmlz, or nmod:nmlz. In each case, the chosen dependency corresponds to the relation that the same type of modifier would have with a NOUN if it were modifying it directly, with the subtype:nmlz indicating that the relation involves nominalizations When the scope of the nominalization is an adjective, the dependency used is amod:nmlz.",
+    "triggers": {
+      "deprel": [
+        "amod:nmlz"
+      ],
+      "lemma": [
+        "go",
+        "kha"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/amod-nmlz.html",
+      "section": "amod:nmlz (adjectival nominalization)"
+    },
+    "example": [
+      "Mi khabe heptade. \\n Small NMLZ.LOC he_got_caught. amod:nmlz(khabe, Mi) amod:nmlz(NMLZ.LOC, Small) obj(heptade, khabe) obj(he_got_caught, NMLZ.LOC)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_DET_NMLZ",
+    "rule_text": "Chintang has two nominalizers: =go and =kha. These enclitics derive a nominal base from another form, which can be almost arbitrary. They are annotated as a type of “empty” nominal, functionally similar to English one. The nominalizer serves as the head of the nominalized structure, with the nominalized element modifying it. Depending on the syntactic category of the nominalized element, different dependency relations are used between the nominalizer (the head) and the root of the nominalized scope: acl:nmlz, advmod:nmlz, amod:nmlz, det:nmlz, or nmod:nmlz. In each case, the chosen dependency corresponds to the relation that the same type of modifier would have with a NOUN if it were modifying it directly, with the subtype:nmlz indicating that the relation involves nominalization. When the scope of the nominalization is a determiner, the dependency used is det:nmlz.",
+    "triggers": {
+      "deprel": [
+        "det:nmlz"
+      ],
+      "lemma": [
+        "go",
+        "kha"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/det-nmlz.html",
+      "section": "det:nmlz (determiner nominalization)"
+    },
+    "example": [
+      "Huŋ khaceŋa Budhahaŋ unumdokonɨŋ. \\n That NMLZ.NSG.ERG Budhahang don't_worship. det(khaceŋa, Huŋ) det(NMLZ.NSG.ERG, That) nsubj(unumdokonɨŋ, khaceŋa) nsubj(don't_worship, NMLZ.NSG.ERG) obj(unumdokonɨŋ, Budhahaŋ) obj(don't_worship, Budhahang)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_FLAT_NUM",
+    "rule_text": "The flat:num subtype of the flat relation is used to connect parts of a multi-word numeral that are not connected by a conjunction.",
+    "triggers": {
+      "deprel": [
+        "flat:num"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/flat-num.html",
+      "section": "flat:num (flat multiword number)"
+    },
+    "example": [
+      "dui sai pacas mililitarlekki \\n two hundred fifty milliliter.APPROX nummod(sai, dui) nummod(hundred, two) nummod(mililitarlekki, sai) nummod(milliliter.APPROX, hundred) flat:num(sai, pacas) flat:num(hundred, fifty)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_NMOD_NMLZ",
+    "rule_text": "Chintang has two nominalizers: =go and =kha. These enclitics derive a nominal base from another form, which can be almost arbitrary. They are annotated as a type of “empty” nominal, functionally similar to English one. The nominalizer serves as the head of the nominalized structure, with the nominalized element modifying it. Depending on the syntactic category of the nominalized element, different dependency relations are used between the nominalizer (the head) and the root of the nominalized scope: acl:nmlz, advmod:nmlz, amod:nmlz, det:nmlz, or nmod:nmlz. In each case, the chosen dependency corresponds to the relation that the same type of modifier would have with a NOUN if it were modifying it directly, with the subtype:nmlz indicating that the relation involves nominalization. When the scope of the nominalization is a nominal, the dependency used is nmod:nmlz.",
+    "triggers": {
+      "deprel": [
+        "nmod:nmlz"
+      ],
+      "lemma": [
+        "go",
+        "kha"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/nmod-nmlz.html",
+      "section": "nmod:nmlz (nominal nominalization)"
+    },
+    "example": [
+      "Teĩbe koceŋa yaŋ naphadihẽ? \\n Village.LOC NMLZ.NSG.ERG ADD help_you? nmod:nmlz(koceŋa, Teĩbe) nmod:nmlz(NMLZ.NSG.ERG, Village.LOC) nsubj(naphadihẽ, koceŋa) nsubj(help_you, NMLZ.NSG.ERG) advmod:emph(koceŋa, yaŋ) advmod:emph(NMLZ.NSG.ERG, ADD)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_OBJ_CAUS",
+    "rule_text": "The valency of a verb can be increased by a causative suffix -mett. A new object is introduced with a semantic role that would be otherwise coded as an oblique dependent. This newly introduced argument is annotated with the obj:caus subtype, marking its role as the caused agent or stimulated participant in the causative event.",
+    "triggers": {
+      "deprel": [
+        "obj:caus"
+      ],
+      "head_feats": {
+        "Voice": [
+          "Cau"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/obj-caus.html",
+      "section": "obj:caus (agentive object in causative construction)"
+    },
+    "example": [
+      "Chace lo pheŋmettukuce aŋ. \\n Child.NSG SURP she_plow.CAUS huh. obj:caus(pheŋmettukuce, Chace) obj:caus(she_plow.CAUS, Child.NSG)"
+    ]
+  },
+  {
+    "id": "CTN_DEP_XCOMP_DESID",
+    "rule_text": "The dependent of an xcomp:desid relation is an open clausal desiderative compliment, which is headed by a desiderative infinitive ( VerbForm=Inf ).",
+    "triggers": {
+      "deprel": [
+        "xcomp:desid"
+      ],
+      "dependent_feats": {
+        "VerbForm": [
+          "Inf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/ctn/dep/xcomp-desid.html",
+      "section": "xcomp:desid (open clausal desiderative compliment)"
+    },
+    "example": [
+      "Waiʔmameiʔpa sinuʔnɨŋ. \\n Wear.INF.DESID he_doesn't_want. xcomp:desid(sinuʔnɨŋ, Waiʔmameiʔpa) xcomp:desid(he_doesn't_want, Wear.INF.DESID)"
+    ]
+  }
+]

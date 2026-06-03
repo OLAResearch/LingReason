@@ -1,0 +1,3308 @@
+[
+  {
+    "id": "XCL_DEP_ACL_ACL_CLAUSAL_MODIFIER_OF_NOUN__01",
+    "rule_text": "acl stands for finite and non-finite clauses that modify a nominal. The acl relation contrasts with the advcl relation, which is used for adverbial clauses that modify a predicate. The head of the acl relation is the noun that is modified, and the dependent is the head of the clause that modifies the noun.",
+    "triggers": {
+      "deprel": [
+        "acl"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/acl.html",
+      "section": "acl (clausal modifier of noun)"
+    },
+    "example": [
+      "ժողովուրդ որ նստէր ի խաւարի. ետես լոյս մեծ: / žołovowrd or nstēr i xawari: etes loys mec. \\n The people who were sitting in darkness saw a great Light. acl(ժողովուրդ / žołovowrd, նստէր / nstēr) acl(people, sitting)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_ADVCL_ADVCL_ADVERBIAL_CLAUSE_MODIFIER__01",
+    "rule_text": "advcl: An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod ) and the dependent is the main predicate of the clause.\nadvcl: According to the current UD guidelines, optional depictives are also tagged as advmod.",
+    "triggers": {
+      "deprel": [
+        "advcl"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/advcl.html",
+      "section": "advcl (adverbial clause modifier)"
+    },
+    "example": [
+      "Իբրեւ ետես զնա. անկաւ առ ոտս նորա: / Ibrew etes zna: ankaw aṙ ots nora. \\n And when he saw him, he fell at his feet. advcl(անկաւ / ankaw, ետես / etes) advcl(fell, saw)",
+      "Գնաց դարձեալ ի լեառնն միայն: / Gnacʻ darjeal i leaṙnn miayn. \\n He departed again into a mountain himself alone. advcl(Գնաց / Gnacʻ, միայն / miayn) advcl(departed, alone)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_ADVMOD_ADVMOD_ADVERBIAL_MODIFIER__01",
+    "rule_text": "advmod: An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase that serves to modify predicate or a modifier word. By contrast, adverbials realized by noun phrases or adpositional phrases are tagged as obl.",
+    "triggers": {
+      "deprel": [
+        "advmod"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/advmod.html",
+      "section": "advmod (adverbial modifier)"
+    },
+    "example": [
+      "Եւ վաղվաղակի յարեաւ աղջիկն: / Ew vałvałaki yareaw ałǰikn. \\n And straightway the damsel arose. advmod(յարեաւ / yareaw, վաղվաղակի / vałvałaki) advmod(arose, straightway)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_AMOD_AMOD_ADJECTIVAL_MODIFIER__01",
+    "rule_text": "amod: An adjectival modifier of a noun (or pronoun) is any adjectival phrase that serves to modify the noun (or pronoun).",
+    "triggers": {
+      "deprel": [
+        "amod"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/amod.html",
+      "section": "amod (adjectival modifier)"
+    },
+    "example": [
+      "կերակուր նորա էր մարախ եւ մեղր վայրենի / kerakowr nora ēr marax ew mełr vayreni \\n his meat was locusts and wild honey amod(մեղր / mełr, վայրենի / vayreni) amod(honey, wild)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_APPOS_APPOS_APPOSITIONAL_MODIFIER__01",
+    "rule_text": "An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun. The modified noun is the more specific term, whereas the modifier is the more generic one.\nappos: In case of nominals, which do not immediately follow the modified noun, nmod is used.",
+    "triggers": {
+      "deprel": [
+        "appos"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/appos.html",
+      "section": "appos (appositional modifier)"
+    },
+    "example": [
+      "գայ Յովհաննէս մկրտիչ քարոզել յանապատին Հրէաստանի ։ / gay Yovhannēs mkrtičʻ kʻarozel yanapatin Hrēastani . \\n came John the Baptist, preaching in the wilderness of Judaea. appos(Յովհաննէս / Yovhannēs, մկրտիչ / mkrtičʻ) appos(John, Baptist)",
+      "Խաւսեալ զ մայր նորա Մարիամ Յովսէփու / Xawseal z mayr nora Mariam Yovsēpʻow \\n When as his mother Mary was espoused to Joseph nmod(Մարիամ / Mariam, մայր / mayr) nmod(Mary, mother)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_AUX_CAUS_AUX_CAUS_CAUSATIVE_AUXILIARY__01",
+    "rule_text": "The aux:caus relation links the infinitive verb (i.e. the governor) and the finite causative auxiliary տալ “to give” in a causative construction. The syntactical subject of the sentence, which corresponds to the causer (external agent) participant of the causative predicate, receives a nsubj:caus or csubj:caus relation.",
+    "triggers": {
+      "deprel": [
+        "aux:caus"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/aux-caus.html",
+      "section": "aux:caus (causative auxiliary)"
+    },
+    "example": [
+      "Ետ տանել զնա առ Հերովդէս։ / Et tanel zna aṙ Herovdēs. \\n He made take him to Herod (Luke 23:7) aux:caus(տանել / tanel, Ետ / Et) obj(տանել / tanel, զնա / zna)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CASE_CASE_CASE_MARKING__01",
+    "rule_text": "Classical Armenian uses combinations of inflectional case forms and adpositions to express semantic case. In UD, adpositions are treated as dependents of the nominal, to which they are attached. The relation between the nominal and the adposition is labelled case.\ncase: Classical Armenian has prepositions, postpositions, and circumpositions. Prepositions can be simplex or multiword expressions. In case of multiword expressions, the subsequent word(s) is linked to the first one by the fixed relation.\nA complex preposition can be disrupted by a head noun, in which case it turns into a circumposition and its component words are linked to the head nominal by the case relation.\nA special case of complex adpositions are combinations of prepositional construction with demonstrative local adverbs that reinforce the meaning of the construction. When used in this function, local adverbs are tagged ADP, linked to the modified nominal by the case relation, and function as constituents of circumposition.\ncase: When a noun phrase contains a modifier, prepositions can be repeated before each of the constituents of the noun phrase (see Meyer 2023). By convention when a noun phrase with an adnominal modifier contains only one preposition, the latter is linked to the head of the noun phrase by the case relation. When the preposition is repeated, its instances are linked by the case relation to the nominal head and its modifier.\nAdpositions can function as case markers and are then linked to nominals by the case relation.",
+    "triggers": {
+      "deprel": [
+        "case"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/case.html",
+      "section": "case (case marking)"
+    },
+    "example": [
+      "ի Գաղիղեա / i Gałiłea \\n into Galilee case(Գաղիղեա / Gałiłea, ի / i)",
+      "ի վերայ նորա / i veray nora \\n on him case(նորա / nora, ի / i) fixed(ի / i, վերայ / veray)",
+      "յ որոյ վերայ քաղաքն նոցա շինեալ էր / y oroy veray kʻałakʻn nocʻa šineal ēr \\n on which their city had been built case(որոյ / oroy, յ / y) case(որոյ / oroy, վերայ / veray)",
+      "էջ ի լեռնէ անտի / ēǰ i leṙnē anti \\n he came down from the mountain case(լեռնէ / leṙnē, ի / i) case(լեռնէ / leṙnē, անտի / anti)",
+      "ընդ այն ճանապարհ / ənd ayn čanaparh \\n by that way case(ճանապարհ / čanaparh, ընդ / ənd) det(ճանապարհ / čanaparh, այն / ayn)",
+      "ընդ աւուրս ն ընդ այնոսիկ / ənd awowrs n ənd aynosik \\n in those (in) days case(աւուրս / awowrs, ընդ / ənd) case(այնոսիկ / aynosik, ընդ / ənd) det(աւուրս / awowrs, այնոսիկ / aynosik) det(աւուրս / awowrs, ն / n)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CC_CC_COORDINATING_CONJUNCTION__01",
+    "rule_text": "A cc is the relation between a conjunct and the coordinating conjunction that precedes it.\ncc: A coordinating conjunction may also appear at the beginning of a sentence. This is also called a cc, and it depends on the root predicate of the sentence.",
+    "triggers": {
+      "deprel": [
+        "cc"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/cc.html",
+      "section": "cc (coordinating conjunction)"
+    },
+    "example": [
+      "Նա մկրտեսցէ զ ձեզ ի հոգի ն սուրբ եւ ի հուր ։ / Na mkrtescʻē z jez i hogi n sowrb ew i howr . \\n He shall baptize you with the Holy Ghost, and with fire. conj(հոգի / hogi, հուր / howr) case(հուր / howr, ի / i) cc(հուր / howr, եւ / ew) conj(Ghost, fire) case(fire, with) cc(fire, and)",
+      "Եւ ինքն Յովհաննէս ունէր հանդերձ ի ստեւոյ ուղտու ։ / Ew inkʻn Yovhannēs ownēr handerj i stewoy owłtow . \\n And the same John had his raiment of camel's hair. cc(ունէր / ownēr, Եւ / Ew) cc(had, And)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CCOMP_CCOMP_CLAUSAL_COMPLEMENT__01",
+    "rule_text": "ccomp: A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective. With a speech verb like say, the content of reported speech is part of the verb’s valency. It therefore attaches as ccomp not only when integrated within the clause as an indirect quotation ( said that… ), but also when set off as a direct quotation.\nccomp: If the speech verb interrupts the reported speech content, parataxis is used instead. The speech verb attaches to the root of the reported speech.",
+    "triggers": {
+      "deprel": [
+        "ccomp"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/ccomp.html",
+      "section": "ccomp (clausal complement)"
+    },
+    "example": [
+      "Եւ ասէ ց նոսա ՝ տեսէք զինչ լսէք դ ։ / Ew asē cʻ nosa ; tesēkʻ zinčʻ lsēkʻ d . \\n And he said unto them, Take heed what ye hear. ccomp(ասէ / asē, տեսէք / tesēkʻ) ccomp(տեսէք / tesēkʻ, լսէք / lsēkʻ) ccomp(said, Take) ccomp(Take, hear)",
+      "Եւ ասէ ՝ պատանի դու ՝ քեզ ասեմ ՝ արի: / Ew asē ; patani dow ; kʻez asem ; ari. \\n And he said, Young man, I say unto thee, Arise. ccomp(ասէ / asē, արի / ari) parataxis(արի / ari, ասեմ / asem) ccomp(said, Arise) parataxis(Arise, say)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_COMPOUND_REDUP_COMPOUND_REDUP_COMPOUND__01",
+    "rule_text": "In Classical Armenian, the compound:redup relation is used for repeated words, usually expressing the distributive semantics, cf., for example, distributive numerals (մի մի / mi mi “one by one”, երկու երկու / erkow erkow “in pairs”) or nouns (ամի ամի / ami ami “year after year”, / բարի բարի / bari bari “goods of different kind”).\ncompound:redup: “sent them two and two” (Lk. 10:1)",
+    "triggers": {
+      "deprel": [
+        "compound:redup"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/compound-redup.html",
+      "section": "compound:redup (compound)"
+    },
+    "example": [
+      "1 առաքեաց / aṙakʻeacʻ առաքել / aṙakʻel VERB _ _ 2 conj _ _ 2 զ / z զ / z ADP _ _ 3 case _ _ 3 նոսա / nosa նա / na PRON _ _ 1 obj _ _ 4 երկուս / erkows երկու / erkow NUM _ _ 3 nummod _ _ 5 երկուս / erkows երկու / erkow NUM _ _ 4 compound:redup _ _"
+    ]
+  },
+  {
+    "id": "XCL_DEP_COMPOUND_COMPOUND_COMPOUND__01",
+    "rule_text": "In Classical Armenian, the compound relation is used for compound numbers. The rightmost numeral is the head, the other numerals are attached as its modifiers.",
+    "triggers": {
+      "deprel": [
+        "compound"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/compound.html",
+      "section": "compound (compound)"
+    },
+    "example": [
+      "Եին արք հինգ հազար. / Ein arkʻ hing hazar: \\n They were five thousand men. nummod(արք / arkʻ, հազար / hazar) nummod(men, thousand) compound(հազար / hazar, հինգ / hing) compound(thousand, five)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CONJ_CONJ_CONJUNCT__01",
+    "rule_text": "A conjunct is the relation between two elements connected by a coordinating conjunction, such as եւ/ ew “and”, կամ/ kam “or”, or a punctuation sign. The first conjunct is the head of the relation and all the other conjuncts depend on it via the conj relation.",
+    "triggers": {
+      "deprel": [
+        "conj"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/conj.html",
+      "section": "conj (conjunct)"
+    },
+    "example": [
+      "երկինք եւ երկիր / erkinkʻ ew erkir \\n heaven and earth conj(երկինք / erkinkʻ, երկիր / erkir) conj(heaven, earth)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_COP_COP_COPULA__01",
+    "rule_text": "A cop (copula) is the relation of a function word used to link a subject to a nonverbal predicate. The verbal copula եմ/ em “to be” and its perfective counterpart լինիմ/ linim “to become” are tagged AUX. Pronominal negated copula չիք/ čʽikʽ (“there is no”) is tagged PRON. The cop relation should only be used for pure copulas that add at most TAME categories to the meaning of the predicate, and only when the nonverbal predicate is treated as the head of the clause. In Classical Armenian, the auxiliary եմ has a defective paradigm and the auxiliary լինիմ is used instead for perfective predicates. Given that the Aspect is a productive grammatical category, the two auxiliaries are considered as complementary copulas.\nThe negated copula represents a grammaticalized combination of a negative particle չ=/ čʽ= and an indefinite pronoun իք/ ikʽ “anything”.",
+    "triggers": {
+      "deprel": [
+        "cop"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/cop.html",
+      "section": "cop (copula)"
+    },
+    "example": [
+      "Եւ էին (եմ) արդարք երկոքին առաջի Աստուծոյ. ։ / Ew ēin (em) ardarkʻ erkokʻin aṙaǰi Astowcoy: . \\n They were both righteous in the sight of God.. cop(արդարք / ardarkʻ, էին / ēin) cop(righteous, were)",
+      "Որպէս աւանդեցին մեզ որ ի սկզբանէ ականատեսք եւ սպասաւորք եղեն (լինիմ) բանի ն: / Orpēs awandecʻin mez or i skzbanē akanateskʻ ew spasaworkʻ ełen (linim) bani n. \\n Just as they were handed down to us by those who from the beginning were eyewitnesses and servants of the word. cop(ականատեսք / akanateskʻ, եղեն / ełen) cop(eyewitnesses, were)",
+      "չիք ինչ ծածուկ. որ ոչ յայտ լիցի / čʻikʻ inčʻ cacowk: or očʻ yayt licʻi \\n nothing is concealed that will not become evident cop(ինչ / inčʻ, չիք / čʻikʻ) cop(nothing, is)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CSUBJ_CAUS_CSUBJ_CAUS_CLAUSAL_CAUSATIVE_SUBJECT__01",
+    "rule_text": "csubj:caus: A clausal causative subject is a clausal syntactic subject of a causative construction.",
+    "triggers": {
+      "deprel": [
+        "csubj:caus"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/csubj-caus.html",
+      "section": "csubj:caus (clausal causative subject)"
+    },
+    "example": [
+      "Զի որ կամիցի զանձն իւր կեցուցանել. կորուսցէ զնա: / Zi or kamicʻi zanjn iwr kecʻowcʻanel: korowscʻē zna. \\n For whoever wants to save his life will lose it. csubj:caus(կորուսցէ / korowscʻē, կամիցի / kamicʻi) obj(կորուսցէ / korowscʻē, զնա / zna)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CSUBJ_PASS_CSUBJ_PASS_CLAUSAL_PASSIVE_SUBJECT__01",
+    "rule_text": "csubj:pass: A clausal passive subject is a clausal syntactic subject of a passive clause.",
+    "triggers": {
+      "deprel": [
+        "csubj:pass"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/csubj-pass.html",
+      "section": "csubj:pass (clausal passive subject)"
+    },
+    "example": [
+      "Որ հաւատայ ի նա. ոչ դատապարտեսցի: / Or hawatay i na: očʻ datapartescʻi. \\n He that believeth on him is not condemned: csubj:pass(դատապարտեսցի / datapartescʻi, հաւատայ / hawatay)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_CSUBJ_CSUBJ_CLAUSAL_SUBJECT__01",
+    "rule_text": "csubj: A clausal syntactic subject.",
+    "triggers": {
+      "deprel": [
+        "csubj"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/csubj.html",
+      "section": "csubj (clausal subject)"
+    },
+    "example": [
+      "որ ունիցի ականջս լսելոյ. լուիցէ / or ownicʻi akanǰs lseloy: lowicʻē \\n he that hath ears to hear, let him hear csubj(լուիցէ / lowicʻē, ունիցի / ownicʻi)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_DET_DET_DETERMINER__01",
+    "rule_text": "The relation determiner ( det ) holds between a nominal head and its determiner. In Classical Armenian, pronominal adjectives and quantifiers can have adpositions and articles as their own dependents, which are attached to their head with the det relation. This is an exception from the general rule, according to which determiners cannot have dependents.\ndet: “And the woman was made whole from that hour.” (Mt. 9:22)\ndet: In a relative clause, the enclitic definite article is commonly attached to the word occupying the second position in the clause, even when it is a personal verb form. In such cases, it is conventionally linked to the relative pronoun at the beginning of the cause:",
+    "triggers": {
+      "deprel": [
+        "det"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/det.html",
+      "section": "det (determiner)"
+    },
+    "example": [
+      "1 Եւ / Ew եւ / ew CCONJ _ _ 2 cc _ _ 2 փրկեցաւ / pʻrkecʻaw փրկել / pʻrkel VERB _ _ 0 root _ _ 3 կին / kin կին / kin NOUN _ _ 2 nsubj _ _ 4 ն / n ն / n DET _ _ 3 det _ _ 5 ի / i ի / i ADP _ _ 6 case _ _ 6 ժամէ / žamē ժամ / žam NOUN _ _ 2 obl _ _ 7 ն / n ն / n DET _ _ 6 det _ _ 8 յ / y ի / i ADP _ _ 9 case _ _ 9 այնմանէ / aynmanē այն / ayn DET _ _ 6 det _ _ 10:: PUNCT _ _ 2 punct _ _",
+      "որ էջ ն յ երկնից / or ēǰ n y erknicʻ \\n he that came down from heaven nsubj(էջ / ēǰ, որ / or) det(որ / or, ն / n)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_DISCOURSE_DISCOURSE_DISCOURSE_ELEMENT__01",
+    "rule_text": "The relation is used for interjections and discourse particles.",
+    "triggers": {
+      "deprel": [
+        "discourse"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/discourse.html",
+      "section": "discourse (discourse element)"
+    },
+    "example": [
+      "եւ ահա բացան նմա երկինք / ew aha bacʻan nma erkinkʻ \\n and, lo, the heavens were opened unto him discourse(բացան / bacʻan, ահա / aha) discourse(opened, lo)",
+      "որ եղեւ իսկ մատնիչ ։ / or ełew isk matničʻ . \\n which also was the traitor discourse(մատնիչ / matničʻ, իսկ / isk)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_DISLOCATED_DISLOCATED_DISLOCATED_ELEMENTS__01",
+    "rule_text": "The dislocated relation is used for fronted or postposed elements that do not fulfil the usual core grammatical relations of a sentence. These elements often appear to be in the periphery of the sentence and may be separated off with a comma intonation.\ndislocated: It is used for fronted elements that introduce the topic of a sentence. In that case, the dislocated element is attached to the head of the clause to which it belongs:\nin UD_Classical_Armenian-CAVaL, the dislocated relation is also used for fronted adpositions:",
+    "triggers": {
+      "deprel": [
+        "dislocated"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/dislocated.html",
+      "section": "dislocated (dislocated elements)"
+    },
+    "example": [
+      "Կամ նոքա ութուտասանքն ՝ համարիք եթե նոքա պարտապա՞նք եղեն: / Kam nokʻa owtʻowtasankʻn ; hamarikʻ etʻe nokʻa partapa?nkʻ ełen. \\n Or those eighteen, think ye that they were sinners. dislocated(պարտապա / partapa՞նք / nkʻ, նոքա / nokʻa)",
+      "Կամիմ զ վասն նոցա կշտամբութեան յարմարել զ բանս: / Kamim z vasn nocʻa kštambowtʻean yarmarel z bans. \\n I wish to insert the reason for reprehending them. obj(յարմարել / yarmarel, բանս / bans) dilocated(բանս / bans, զ / z)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_FIXED_FIXED_FIXED_MULTIWORD_EXPRESSION__01",
+    "rule_text": "The fixed relation is used for grammaticized multiword expressions, which behave like function words. Fixed MWEs are annotated in a flat structure, where all subsequent words in the expression are attached to the first one using the fixed label. The assumption is that these expressions do not have any internal syntactic structure.\nIn UD_Classical_Armenian-CAVaL, fixed is used for multiword adpositions and conjunctions. In Classical Armenian, the head of multiword adposition is always an adposition, whereas the following element can be another adposition, an adverb, or a noun.",
+    "triggers": {
+      "deprel": [
+        "fixed"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/fixed.html",
+      "section": "fixed (fixed multiword expression)"
+    },
+    "example": [
+      "ասացաւ ի ձեռն Էսայայ / asacʻaw i jeṙn Ēsayay \\n was spoken by Esaias fixed(ի / i, ձեռն / jeṙn) case(Էսայայ / Ēsayay, ի / i)",
+      "շրջէր շուրջ զ գաւառաւք ն / šrǰēr šowrǰ z gawaṙawkʻ n \\n he went round about the villages fixed(շուրջ / šowrǰ, զ / z) case(գաւառաւք / gawaṙawkʻ, շուրջ / šowrǰ)",
+      "որպէս զի փառաւորեսցին ի մարդկանէ / orpēs zi pʻaṙaworescʻin i mardkanē \\n that they may have glory of men fixed(որպէս / orpēs, զի / zi) mark(փառաւորեսցին / pʻaṙaworescʻin, որպէս / orpēs)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_FLAT_FLAT_FLAT__01",
+    "rule_text": "The flat relation is used to combine the elements of an expression where none of the immediate components can be identified as the sole head using standard substitution tests. Flat expressions are annotated with a flat structure, where all subsequent components in the expression are attached to the first one using the flat label.\nIn UD_Classical_Armenian-CAVaL, an unspecialized flat relation is used for personal names and foreign expressions. In these functions, it corresponds to specialized flat:name and flat:foreign tags, respectively, used in some other treebanks.",
+    "triggers": {
+      "deprel": [
+        "flat"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/flat.html",
+      "section": "flat (flat)"
+    },
+    "example": [
+      "ետես Սիմովն Պետրոս / etes Simovn Petros \\n Simon Peter saw it flat(Սիմովն / Simovn, Պետրոս / Petros) flat(Simon, Peter)",
+      "ասէ ց նա ՝ տաղիթա կումի ՝ / asē cʻ na ; tałitʻa kowmi ; \\n said unto her, Talitha cumi flat(տաղիթա / tałitʻa, կումի / kowmi) ccomp(ասէ / asē, տաղիթա / tałitʻa)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_IOBJ_IOBJ_INDIRECT_OBJECT__01",
+    "rule_text": "iobj: The indirect object of a verb is any nominal phrase that is a core argument of the verb but is neither its subject nor direct object. The prototypical example is the recipient of ditransitive verbs of exchange, which is marked by the dative case:\nGiven that the iobj is marked by the bare dative, recipient-like arguments of ditransitive verbs marked by the prepositional construction with ց=/ cʻ= “to” + accusative is tagged as an oblique argument with a specialized relation obl:arg.",
+    "triggers": {
+      "deprel": [
+        "iobj"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/iobj.html",
+      "section": "iobj (indirect object)"
+    },
+    "example": [
+      "զ այս ամենայն քեզ տաց ։ / z ays amenayn kʻez tacʻ . \\n all these things I will give you iobj(տաց / tacʻ, քեզ / kʻez) iobj(give, things)",
+      "ասէ ց նա եկ զկնի իմ / asē cʻ na ek zkni im \\n He said to him, Follow me! obl:arg(ասէ / asē, նա / na) ccomp(ասէ / asē, եկ / ek) obl:arg(said, him) ccomp(said, Follow)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_MARK_MARK_MARKER__01",
+    "rule_text": "A marker is the word marking a clause as subordinate to another clause. The marker is a dependent of the subordinate clause head.\nmark: For a complement clause, this is words like թե/ tʻe “that”, which is also the most common complementizer for verbs of speech and cognition.\nFor an adverbial clause, the marker is typically a subordinating conjunction.\nSubordinate clauses are introduced by marker words mark.",
+    "triggers": {
+      "deprel": [
+        "mark"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/mark.html",
+      "section": "mark (marker)"
+    },
+    "example": [
+      "Հարցանէր ի նոցանէ թե ուր ծնանիցի Քրիստոս ն: / Harcʻanēr i nocʻanē tʻe owr cnanicʻi Kʻristos n. \\n He inquired of them where the Messiah was to be born. ccomp(Հարցանէր / Harcʻanēr, ծնանիցի / cnanicʻi) mark(ծնանիցի / cnanicʻi, թե / tʻe)",
+      "Եւ իբրեւ մկրտեցաւ Յիսուս ել վաղվաղակի ի ջրոյ անտի: / Ew ibrew mkrtecʻaw Yisows el vałvałaki i ǰroy anti. \\n And Jesus, when he was baptized, went up straightway out of the water. advcl(ել / el, մկրտեցաւ / mkrtecʻaw) mark(մկրտեցաւ / mkrtecʻaw, իբրեւ / ibrew) advcl(went, baptized) mark(baptized, when)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_NMOD_NMOD_NOMINAL_MODIFIER__01",
+    "rule_text": "The nmod relation is used for nominal dependents of another noun or noun phrase and functionally corresponds to an attribute, or genitive complement. In UD_Classical_Armenian-CAVaL, it also applies to cases where the head or dependent is a verbal noun (UPOS Verb, feature VerbForm=Vnoun ). Nominal dependents of verbs, adjectives, and adverbs are tagged as obl.",
+    "triggers": {
+      "deprel": [
+        "nmod"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/nmod.html",
+      "section": "nmod (nominal modifier)"
+    },
+    "example": [
+      "մերձեալ է արքայութիւն երկնից / merjeal ē arkʻayowtʻiwn erknicʻ \\n the kingdom of heaven is at hand nmod(արքայութիւն / arkʻayowtʻiwn, երկնից / erknicʻ) nmod(kingdom, heaven)",
+      "ժամանակ աստեղն երեւելոյ / žamanak astełn ereweloy \\n time the star appeared nmod(ժամանակ / žamanak, երեւելոյ / ereweloy)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_NSUBJ_CAUS_NSUBJ_CAUS_CAUSATIVE_NOMINAL_SUBJECT__01",
+    "rule_text": "nsubj:caus: A syntactic subject of a causative construction.",
+    "triggers": {
+      "deprel": [
+        "nsubj:caus"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/nsubj-caus.html",
+      "section": "nsubj:caus (causative nominal subject)"
+    },
+    "example": [
+      "Մեծացուսցէ անձն իմ զ Տէր: / Mecacʻowscʻē anjn im z Tēr. \\n My soul exalts the Lord. nsubj:caus(Մեծացուսցէ / Mecacʻowscʻē, անձն / anjn) obj(Մեծացուսցէ / Mecacʻowscʻē, Տէր / Tēr)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_NSUBJ_PASS_NSUBJ_PASS_PASSIVE_NOMINAL_SUBJECT__01",
+    "rule_text": "nsubj:pass: A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.",
+    "triggers": {
+      "deprel": [
+        "nsubj:pass"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/nsubj-pass.html",
+      "section": "nsubj:pass (passive nominal subject)"
+    },
+    "example": [
+      "Առաքեցաւ Գաբրիէղ հրեշտակ յԱստուածոյ ի քաղաք մի Գաղիղեացւոց: / Aṙakʻecʻaw Gabriēł hreštak yAstowacoy i kʻałakʻ mi Gałiłeacʻwocʻ. \\n The angel Gabriel was sent from God unto a city of Galilee. nsubj:pass(Առաքեցաւ / Aṙakʻecʻaw, Գաբրիէղ / Gabriēł)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_NSUBJ_NSUBJ_NOMINAL_SUBJECT__01",
+    "rule_text": "A nominal subject ( nsubj ) is a nominal which is the syntactic subject and the proto-agent of a clause. It is expressed by the nominative. Note that Classical Armenian is a pro-drop language and a personal pronoun as subject is often omitted. The nsubj relation is also used for the nominal subject of a passive verb or verb group, even though the subject is then not typically the proto-agent argument due to valency changing operations. In Classical Armenian, the subtype nsubj:pass is used in such cases. In case of the syntactic subject of a causative verb, the subtype nsubj:caus is used.\nnsubj: When the proclitic particle զ= / z=, which otherwise typically marks the referentially prominent direct object obj, specifies a sentential argument expressed by a relative clause, it can be attached to the subject of the clause in the nominative.\nnsubj: The logical subject of transitive verbs is typically expressed by the genitive case in the periphrastic perfect tenses. In such cases, obl:arg is used.",
+    "triggers": {
+      "deprel": [
+        "nsubj"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/nsubj.html",
+      "section": "nsubj (nominal subject)"
+    },
+    "example": [
+      "հրեշտակ Տեառն ի տեսլեան երեւէր / hreštak Teaṙn i teslean erewēr \\n an angel of the Lord appeareth in a dream nsubj(երեւէր / erewēr, հրեշտակ / hreštak) nsubj(appeareth, angel)",
+      "գործեն ՝ զ որ ոչ էր արժան գործել ի շաբաթու / gorcen ; z or očʻ ēr aržan gorcel i šabatʻow \\n they do that which is not lawful to do upon the sabbath day ccomp(գործեն / gorcen, արժան / aržan) nsubj(արժան / aržan, որ / or) det(որ / or, զ / z)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_NUMMOD_NUMMOD_NUMERIC_MODIFIER__01",
+    "rule_text": "nummod: A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.\nnummod: Note that indefinite quantifiers such as բազում/ bazowm “many” and սակաւ/ sakaw “few” are tagged DET and not NUM, and their relation to the quantified noun is not nummod but amod.",
+    "triggers": {
+      "deprel": [
+        "nummod"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/nummod.html",
+      "section": "nummod (numeric modifier)"
+    },
+    "example": [
+      "Եին առ մեզ եղբարք եւթն: / Ein aṙ mez ełbarkʻ ewtʻn. \\n Now there were seven brothers among us. nummod(եղբարք / ełbarkʻ, եւթն / ewtʻn) nummod(brothers, seven)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_OBJ_OBJ_DIRECT_OBJECT__01",
+    "rule_text": "Typically, the object is the noun phrase that denotes the entity acted upon or which undergoes a change of state or motion (the proto-patient). In Classical Armenian, the object is marked by the accusative case. Classical Armenian is usually discribed as a language with a flexible (S)VO word order, and the position of the direct object is not fixed.\nClassical Armenian has a differential object marking. The referentially prominent direct object is marked by an adposition զ= / z= (see Case ).\nIf there are two core arguments in the accusative, only one of them has the obj relation, while others are iobj.\nobj: Dependents in the accusative, which are not core arguments, take the obl relation.",
+    "triggers": {
+      "deprel": [
+        "obj"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/obj.html",
+      "section": "obj (direct object)"
+    },
+    "example": [
+      "Ի սկզբանէ արար Աստուած զ երկին եւ զ երկիր: / I skzbanē arar Astowac z erkin ew z erkir. \\n In the beginning God created the heaven and the earth. obj(արար / arar, երկին / erkin) obj(արար / arar, երկիր / erkir) obj(created, heaven) obj(created, earth)",
+      "Եւ ընթացեալ մի ոմն ելից սպունգ մի քացախով: / Ew əntʻacʻeal mi omn elicʻ spowng mi kʻacʻaxov. \\n And one ran and filled a spunge with vinegar. obj(ելից / elicʻ, սպունգ / spowng) obj(filled, spunge)",
+      "հարցից եւ ես զ ձեզ բան մի / harcʻicʻ ew es z jez ban mi \\n I will ask you one question obj(հարցից / harcʻicʻ, բան / ban) iobj(հարցից / harcʻicʻ, ձեզ / jez) obj(ask, question) iobj(ask, you)",
+      "բազում անգամ [Acc] անկանի ի հուր / bazowm angam [Acc] ankani i howr \\n many times he falls into the fire obl(անկանի / ankani, անգամ / angam)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_OBL_AGENT_OBL_AGENT_AGENT_MODIFIER__01",
+    "rule_text": "The relation obl:agent is used for agents of passive verbs. They are mainly expressed by a noun in the ablative, rarely in the instrumental cases.\nobl:agent: Typical agents are animate, but it is not a rule. Inanimate agents may be sometimes difficult to distinguish from instruments, which are also coded by the instrumental case and are attached using the simple relation obl.",
+    "triggers": {
+      "deprel": [
+        "obl:agent"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/obl-agent.html",
+      "section": "obl:agent (agent modifier)"
+    },
+    "example": [
+      "մկրտեին ի նմանէ [Abl] ի Յորդանան գետ / mkrtein i nmanē [Abl] i Yordanan get \\n they were baptized by him in the river of Jordan obl:agent(մկրտեին / mkrtein, նմանէ / nmanē) case(նմանէ / nmanē, ի / i)",
+      "վարէր հոգւով [Ins] ն յ անապատ / varēr hogwov [Ins] n y anapat \\n was led by the Spirit into the wilderness obl:agent(վարէր / varēr, հոգւով / hogwov) obl:agent(led, Spirit)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_OBL_ARG_OBL_ARG_OBLIQUE_ARGUMENT__01",
+    "rule_text": "The relation obl:arg for oblique arguments and distinguishes them from adjuncts (such as specifications of time, location, manner or instrument), which use the plain obl relation. Two types of oblique arguments are marked by obl:arg in the UD_Classical_Armenian-CAVaL treebank:\nobl:arg: Agents expressed by the genitive case in the periphrastic perfect tenses:\nobl:arg: Recipient-like participants expressed by the prepositional construction ց=/ cՙ = plus the accusative:",
+    "triggers": {
+      "deprel": [
+        "obl:arg"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/obl-arg.html",
+      "section": "obl:arg (oblique argument)"
+    },
+    "example": [
+      "զինչ ՞ գործ գործեալ է քո [Gen]: / zinčʻ ? gorc gorceal ē kʻo [Gen]. \\n What have you done? obl:arg(գործեալ / gorceal, քո / kʻo)",
+      "Եւ հարցանէր ց նա ՝ թե զինչ ՞ անունէ քո: / Ew harcʻanēr cʻ na ; tʻe zinčʻ ? anownē kʻo. \\n And he asked him, What is thy name? obl:arg(հարցանէր / harcʻanēr, նա / na)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_OBL_OBL_OBLIQUE_NOMINAL__01",
+    "rule_text": "The obl relation is used for a nominal (noun, pronoun, noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial attaching to a verb, adjective or other adverb. In Classical Armenian, the obl relation is specified either by bare case forms or by case forms in conjunction with adposition(s). Specialized relation obl:agent is used for an agent of the passive construction, and obl:arg is used for either an agent expressed by the genitive case in the periphrastic perfect tenses or a recipient-like participant expressed by the prepositional phrase ց=/ cՙ = plus the accusative.",
+    "triggers": {
+      "deprel": [
+        "obl"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/obl.html",
+      "section": "obl (oblique nominal)"
+    },
+    "example": [
+      "նա մկրտեսցէ զ ձեզ ի հոգի [Loc] ն սուրբ / na mkrtescʻē z jez i hogi [Loc] n sowrb \\n He will baptize you with the Holy Spirit obl(մկրտեսցէ / mkrtescʻē, հոգի / hogi) case(հոգի / hogi, ի / i) obl(baptize, Spirit) case(Spirit, with)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_ORPHAN_ORPHAN_ORPHAN_IN_ELLIPSIS__01",
+    "rule_text": "The orphan relation is used in cases of head ellipsis where simple promotion would result in an unnatural and misleading dependency relation. The typical case is predicate ellipsis where one of the core arguments has to be promoted to clausal head.",
+    "triggers": {
+      "deprel": [
+        "orphan"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/orphan.html",
+      "section": "orphan (orphan in ellipsis)"
+    },
+    "example": [
+      "նմա պարտ է աճել, եւ ինձ մեղմանալ / nma part ē ačel, ew inj mełmanal \\n he must increase, but I [must] decrease. xcomp(պարտ / part, աճել / ačel) conj(պարտ / part, մեղմանալ / mełmanal) orphan(մեղմանալ / mełmanal, եւ / ew) orphan(մեղմանալ / mełmanal, ինձ / inj)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_PARATAXIS_PARATAXIS_PARATAXIS__01",
+    "rule_text": "The parataxis relation is a relation between a word (often the main predicate of a sentence) and other elements, such as a sentential parenthetical or a clause after a “:” or a “;”, placed side by side without any explicit coordination, subordination, or argument relation with the head word. Parataxis is a discourse-like equivalent of coordination.\nparataxis: When a speech verb interrupts reported speech content, the interruption is treated as a parenthetical parataxis:",
+    "triggers": {
+      "deprel": [
+        "parataxis"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/parataxis.html",
+      "section": "parataxis (parataxis)"
+    },
+    "example": [
+      "Եւ առ եկեր առաջի նոցա: / Ew aṙ eker aṙaǰi nocʻa. \\n And He took it and ate it in front of them. parataxis(առ / aṙ, եկեր / eker)",
+      "Որոյ սկիզբն լեալ ասէ զ Զրուանն եւ զ Տիտանն եւ զ Յապետոսթէ: / Oroy skizbn leal asē z Zrowann ew z Titann ew z Yapetostʻē. \\n The beginning of this book, he says, deals with Zrvan, Titan, and Yapetost’ē. parataxis(սկիզբն / skizbn, ասէ / asē) parataxis(deals, says)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_PUNCT_PUNCT_PUNCTUATION__01",
+    "rule_text": "This relation punct is used for any punctuation sign in a clause.\nTokens with the relation punct always attach to content words (except in cases of ellipsis) and can never have dependents.",
+    "triggers": {
+      "deprel": [
+        "punct"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/punct.html",
+      "section": "punct (punctuation)"
+    },
+    "example": [
+      "Դուք էք աղ երկրի, / Dowkʻ ēkʻ ał erkri, \\n You are the salt of the earth; punct(աղ / ał,,) punct(salt,;)",
+      "Շինէ եւ գիւղ մի, եւ անուանէ յիւր անուն Հայկաշէն: / Šinē ew giwł mi, ew anowanē yiwr anown Haykašēn. \\n He also built a village and called it after his own name Haykashēn. conj(Շինէ / Šinē, անուանէ / anowanē) punct(անուանէ / anowanē,,)",
+      "Երանի սգաւորաց, զի նոքա մխիթարեսցին: / Erani sgaworacʻ, zi nokʻa mxitʻarescʻin. \\n Blessed are those who mourn, for they will be comforted. punct(մխիթարեսցին / mxitʻarescʻin,,) punct(comforted,,)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_ROOT_ROOT_ROOT__01",
+    "rule_text": "The root relation points to the root of the sentence. There is just one node with the root dependency relation in every tree.",
+    "triggers": {
+      "deprel": [
+        "root"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/root.html",
+      "section": "root (root)"
+    },
+    "example": [
+      "ROOT Ելին ի քաղաքէ ն ։ / ROOT Elin i kʻałakʻē n . \\n ROOT Then they went out of the city. root(ROOT-1, Ելին / Elin)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_VOCATIVE_VOCATIVE_VOCATIVE__01",
+    "rule_text": "The vocative relation is used to mark a dialogue participant addressed in a text. The relation links the addressee’s name to its host sentence.",
+    "triggers": {
+      "deprel": [
+        "vocative"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/vocative.html",
+      "section": "vocative (vocative)"
+    },
+    "example": [
+      "Ասեն ց նա ՝ այո Տէր: / Asen cʻ na ; ayo Tēr. \\n They said to Him, “ Yes, Lord! ” vocative(այո / ayo, Տէր / Tēr) vocative(Yes, Lord)"
+    ]
+  },
+  {
+    "id": "XCL_DEP_XCOMP_XCOMP_OPEN_CLAUSAL_COMPLEMENT__01",
+    "rule_text": "An open clausal complement ( xcomp ) of a verb or an adjective is (i) a core argument of the verb, (ii) which is without its own subject and (iii) for which the reference of the subject is necessarily determined by an argument external to the xcomp. The third requirement is often referred to as obligatory control. An xcomp can also be described as a predicative complement. The subject of the xcomp is normally, but not always, controlled by the object of the next higher clause, if there is one, or else by the subject of the next higher clause.\nContrast xcomp with other complement clauses where there is an overt subject or no obligatory control, which use ccomp.\nNote that xcomp is used for core arguments of predicates so it will not be used for non-core instances of secondary predication with the relation advcl.",
+    "triggers": {
+      "deprel": [
+        "xcomp"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/dep/xcomp.html",
+      "section": "xcomp (open clausal complement)"
+    },
+    "example": [
+      "Ոչ կարէ քաղաք թաքչել որ ի վերայ լերին կայցէ: / Očʻ karē kʻałakʻ tʻakʻčʻel or i veray lerin kaycʻē. \\n A city that is set on an hill cannot be hid. xcomp(կարէ / karē, թաքչել / tʻakʻčʻel) xcomp(cannot, hid)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_ANIMACY_ANIM_ANIMATE__01",
+    "rule_text": "Anim (animate): Pronouns and pronominal adjectives referring to animate participants.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON"
+      ],
+      "feats": {
+        "Animacy": [
+          "Anim"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Animacy.html",
+      "section": "Anim (animate)"
+    },
+    "example": [
+      "ով/ ov “who”",
+      "ոք/ okʻ “anyone”, “any”",
+      "ոմն/ omn “someone”, “certain”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_ANIMACY_INAN_INANIMATE__01",
+    "rule_text": "Inan (inanimate): Pronouns and pronominal adjectives referring to inanimate participants.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON"
+      ],
+      "feats": {
+        "Animacy": [
+          "Inan"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Animacy.html",
+      "section": "Inan (inanimate)"
+    },
+    "example": [
+      "զինչ/ zinčʻ “what”, “which”",
+      "ինչ/ inčʻ “something”, “any”",
+      "իմն/ imn “certain”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_ASPECT_IMP_IMPERATIVE__01",
+    "rule_text": "Imp (Imperfective): The action is typically presented as incomplete or having no specific temporal localization. Within a two-aspect system, the imperfective aspect covers several aspectual meanings such as durative, progressive, iterative, distributive, habitual. The tag is applied to the present, imperfect, present subjunctive, and prohibitive.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "Imp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Aspect.html",
+      "section": "Imp (imperfective)"
+    },
+    "example": [
+      "ասեմ ձեզ / asem jez “I am telling you” (progressive action in the moment of speaking)",
+      "բժշկէր զամենայն հիւանդութիւնս / bžškēr zamenayn hiwandowtʻiwns “he was healing every sickness” (continuous activity without an exact temporal localization)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_ASPECT_PERF_PERFECT__01",
+    "rule_text": "Perf (perfect): The action is typically presented as completed or as viewed in its entirety. Within a two-aspect system, the perfective aspect covers several aspectual meanings such as completive and punctive. The tag is applied to the aorist, aorist subjunctive, and imperative.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Aspect": [
+          "Perf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Aspect.html",
+      "section": "Perf (perfect)"
+    },
+    "example": [
+      "եմուտ նա ի նաւ / emowt na i naw “he entered the ship”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_NOM_NOMINATIVE__01",
+    "rule_text": "Nom (nominative): The base form of the nominal, also used as citation form (lemma). This is the default case for subjects of clauses (see below on the genitive for exceptions). The vocative does not have a dedicated form and is expressed by the nominative. The nominative typically does not take adpositions with one exception: when the particle զ= / z= specifies a sentential argument expressed by a relative clause, it can be added to the noun phrase expressing the subject of the clause in the nominative.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Nom"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Nom (nominative)"
+    },
+    "example": [
+      "Ասէ ց=նա հրեշտակ =ն: / Asē cʻ=na hreštak =n. “The angel said unto him.”",
+      "ահաւանիկ աշակերտքն քո գործեն՝ զ=որ ոչ էր արժան գործել ի շաբաթու / ahawanik ašakertkʻn kʻo gorcen; z=or očʻ ēr aržan gorcel i šabatʻow “thy disciples do that which is not lawful to do upon the sabbath day” (Mt. 12:2)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_ACC_ACCUSATIVE__01",
+    "rule_text": "Acc (accusative): The accusative case most typically expresses the direct object of a transitive sentence. In this function, either a bare accusative form is used, or it is combined with the proclitic determinative particle զ= / z=, when the direct object is referentially prominent (the differential object marking pattern).",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Acc"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Acc (accusative)"
+    },
+    "example": [
+      "Զի ի լրութենէ անտի նորա մեք ամենեքին առաք շնորհս փոխանակ շնորհաց: / Zi i lrowtʻenē anti nora mekʻ amenekʻin aṙakʻ šnorhs pʻoxanak šnorhacʻ. “And of his fulness have all we received, and grace for grace.” (Jn. 1:16)",
+      "Աբրահամ ծնաւ զ=Իսահակ: / Abraham cnaw z=Isahak. “Abraham begat Isaac.” (Mt. 1:2)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_GEN_GENITIVE__01",
+    "rule_text": "Gen (genitive): The genitive is only distinct from the dative in personal pronouns and in the singular of demonstrative pronouns. A nominal in the genitive typically functions as an attribute of another nominal. There is no partitive genitive in Classical Armenian; the partitive semantics is expressed by the ablative. The logical subject can be in the genitive in the perfect and pluperfect periphrastic tenses (mostly with transitive verbs), expressed by the past participle and a copula. The copula typically does not agree with the logical subject in number. When the secondary predication is expressed by a verbal noun, the logical subject is also expressed by the genitive.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Gen"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Gen (genitive)"
+    },
+    "example": [
+      "անուն նորա / anown nora “his/her/its name”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_DAT_DATIVE__01",
+    "rule_text": "Dat (dative): This is the word form often used for indirect objects of verbs.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Dat"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Dat (dative)"
+    },
+    "example": [
+      "Եւ տաց քեզ փականս արքայութեան երկնից: / Ew tacʻ kʻez pʻakans arkʻayowtʻean erknicʻ. “And I will give unto thee the keys of the kingdom of heaven.” (Mt. 16:19)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_ABL_ABLATIVE__01",
+    "rule_text": "Abl (ablative): The ablative case typically describes a motion from the source or an agent in the passive voice construction. In these functions it is used in conjunction with the preposition ի/ i.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Abl"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Abl (ablative)"
+    },
+    "example": [
+      "զի լցցի որ ասացաւն ի Տեառնէ / zi lcʻcʻi or asacʻawn i Teaṙnē “that it might be fulfilled which was spoken of the Lord” (Mt. 1:22)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_LOC_LOCATIVE__01",
+    "rule_text": "Loc (locative): The locative case typically expresses the location in space or time. It is used with different adpositions, most typically ի/ i.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Loc"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Loc (locative)"
+    },
+    "example": [
+      "ընդէ / əndē՞ր / r խորհիք / xorhikʻ դուք / dowkʻ չարիս / čʻaris ի / i սիրտս / sirts ձեր / jer / əndē?r xorhikʻ dowkʻ čʻaris i sirts jer “Wherefore think ye evil in your hearts?” (Mt. 9:4)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_CASE_INS_INSTRUMENTAL__01",
+    "rule_text": "Ins (instrumental): The instrumental case is typically used withan an adposition to express an instrument.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Case": [
+          "Ins"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Case.html",
+      "section": "Ins (instrumental)"
+    },
+    "example": [
+      "հոգւով Աստուածոյ հանեմ ես զդեւս / hogwov Astowacoy hanem es zdews “I cast out devils by the Spirit of God” (Mt. 12:28)"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_DEFINITE_IND_INDEFINITE__01",
+    "rule_text": "Ind (indefinite): The value Ind is interpreted as non-specific indefinite and characterizes indefinite pronouns/determiners ոք/ okʻ “anyone” (pronoun) and “any” (pronominal adjective), ինչ/ inčʻ “something; anything” (which may occasionally have specific indefinite meaning), and indefinite adverbs երբեք/ erbekʻ “at any time”, ուրեք/ owrekʻ “anywhere”, and ուստեք/ owstekʻ “from anywhere”.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM"
+      ],
+      "feats": {
+        "Definite": [
+          "Ind"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Definite.html",
+      "section": "Ind (indefinite)"
+    },
+    "example": [
+      "indefinite pronoun: ոք/ okʻ “anyone” (pronoun)",
+      "indefinite pronominal adjective: ոք/ okʻ “any” (pronominal adjective)",
+      "indefinite non-specific adverb: երբեք/ erbekʻ “at any time”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_DEFINITE_SPEC_SPECIFIC_INDEFINITE__01",
+    "rule_text": "Spec (specific indefinite): The value Spec is interpreted as non-specific indefinite and characterizes pronouns/pronominal adjectives ոմն/ omn “someone; some”, իմն/ imn “something” (rare, mostly substituted by ինչ/ inčʻ ), մի/ mi “certain”, and an indefinite adverbs երբեմն/ erbemn “at some time” and ուրեմն/ owremn “somewhere”.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM"
+      ],
+      "feats": {
+        "Definite": [
+          "Spec"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Definite.html",
+      "section": "Spec (specific indefinite)"
+    },
+    "example": [
+      "specific indefinite pronoun: ոմն/ omn “someone”, ինչ/ inčʻ “something”",
+      "specific indefinite determiner: մի/ mi “certain”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_DEFINITE_DEF_DEFINITE__01",
+    "rule_text": "Def (definite): The value Def is interpreted as definite and characterizes enclitic determiners =ս/ =s “this (mine)”, =դ/ =d “that (your)”, =ն/ =n “that (their)” (Klein 1996). It is also assigned to the adposition զ=/ z= when it marks the referentially prominent direct object (Müth 2011).",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM"
+      ],
+      "feats": {
+        "Definite": [
+          "Def"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Definite.html",
+      "section": "Def (definite)"
+    },
+    "example": [
+      "enclitic determiners: =ն / n/ =n “that (their)”",
+      "adposition of definite object: զ=/ z="
+    ]
+  },
+  {
+    "id": "XCL_FEAT_DEIXIS_PROX_PROXIMAL__01",
+    "rule_text": "Prox (proximal): The entity is close to the reference point (e.g., to the speaker).",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "Deixis": [
+          "Prox"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Deixis.html",
+      "section": "Prox (proximal)"
+    },
+    "example": [
+      "proximal pronoun: սա/ sa “this one (mine)”",
+      "proximal determiner: այս/ ays “this (mine)”",
+      "proximal adposition: աստի/ asti “from here”",
+      "proximal adverbs: այսպէս/ ayspēs “like this”",
+      "proximal interjection: ահաւասիկ/ ahawasik “behold”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_DEIXIS_MED_MEDIAL__01",
+    "rule_text": "Med (medial): The entity is neither close nor far away from the reference point (e.g., from the speaker).",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "Deixis": [
+          "Med"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Deixis.html",
+      "section": "Med (medial)"
+    },
+    "example": [
+      "medial pronoun: դա/ da “that one (your)”",
+      "medial determiner: այդ/ ayd “that (your)”",
+      "medial adposition: այտի/ ayti “from there”",
+      "medial adverbs: այդպէս/ aydpēs “like that”",
+      "medial interjection: ահաւադիկ/ ahawadik “behold”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_DEIXIS_REMT_REMOTE__01",
+    "rule_text": "Remt (remote): The entity is far away from the reference point (e.g., from the speaker).",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "Deixis": [
+          "Remt"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Deixis.html",
+      "section": "Remt (remote)"
+    },
+    "example": [
+      "distal pronoun: նա/ na “that one (their)”",
+      "distal determiner: այն/ ayn “that (their)”",
+      "distal adposition: անտի/ anti “from there”",
+      "distal adverbs: այնպէս/ aynpēs “like that”",
+      "distal interjection: ահաւանիկ/ ahawanik “behold”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_MOOD_IND_INDEFINITE__01",
+    "rule_text": "Ind (indefinite): The indicative can be considered the default mood. A verb in indicative merely states that something happens, has happened or will happen, without adding any attitude of the speaker.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Mood": [
+          "Ind"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Mood.html",
+      "section": "Ind (indefinite)"
+    },
+    "example": [
+      "Present indicative: ասեմ/ asem “I say; I am saying”."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_MOOD_IMP_IMPERATIVE__01",
+    "rule_text": "Imp (imperative): The speaker uses imperative to order or ask the addressee to do the action of the verb. Classical Armenian differentiate between the imperative and prohibitive (negated imperative). Both categories are tagged as Mood=Imp and are differentiated by the presence of the dependent negative particle մի/ mi “not”, which is used with the prohibitive.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Mood": [
+          "Imp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Mood.html",
+      "section": "Imp (imperative)"
+    },
+    "example": [
+      "Imperative: ասա/ asa “say!”",
+      "Prohibitive: մի լար / mi lar “don’t cry!”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_MOOD_SUB_SUBJUNCTIVE__01",
+    "rule_text": "Sub (subjunctive): The subjunctive mood is used under certain circumstances in subordinate clauses, typically for actions that are subjective or otherwise uncertain. In some contexts, the mood expresses also the desire that the action happens; it is thus close to both optative and jussive. In Classical Armenian, it has perfective and imperfective forms and can express the future.\nSub (subjunctive): The subjunctive can have an imperative form, sometimes called “cohortative”, with a special form of 2sg. in -ջիր/ -ǰir. Given that the UD annotation scheme does not allow to combine two instances of one feature, the imperative forms do not have a dedicated tag in the current version of the CAVaL treebank and are tagged as variants of the 2sg. subjunctive form.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Mood": [
+          "Sub"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Mood.html",
+      "section": "Sub (subjunctive)"
+    },
+    "example": [
+      "Imperfective subjunctive: ասիցեմ/_asicʻem “I would/will be saying”",
+      "Perfective subjunctive: ասասցեմ/_asascʻem “I would/will say”",
+      "Cohortative: ասասջիր/ asasǰir “could you say!”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMBER_SING_SINGULAR__01",
+    "rule_text": "Sing (singular): A singular form denotes one entity.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Number": [
+          "Sing"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Number.html",
+      "section": "Sing (singular)"
+    },
+    "example": [
+      "տուն/ town “house”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMBER_PLUR_PLURAL__01",
+    "rule_text": "Plur (plural): A plural form can denote several entities, collective entity or an abstract notion.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET",
+        "NUM",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Number": [
+          "Plur"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Number.html",
+      "section": "Plur (plural)"
+    },
+    "example": [
+      "տունք/ townkʻ “houses”",
+      "միտք/ mitkʻ “mind”",
+      "մաւրուք/ mawrukʻ “beard”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMTYPE_CARD_CARDINAL__01",
+    "rule_text": "Card (cardinal): Cardinal numerals modify nominals, with which they partially agreement in number and case.",
+    "triggers": {
+      "upos": [
+        "NUM",
+        "ADJ",
+        "DET"
+      ],
+      "feats": {
+        "NumType": [
+          "Card"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/NumType.html",
+      "section": "Card (cardinal)"
+    },
+    "example": [
+      "մի/ mi “one”, երկու/ erkow “two”, երեք/ erekʻ “three”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMTYPE_DIST_DISTRIBUTIVE__01",
+    "rule_text": "Dist (distributive): Used to express that the same quantity is distributed to each member in a set of targets.",
+    "triggers": {
+      "upos": [
+        "NUM",
+        "ADJ",
+        "DET"
+      ],
+      "feats": {
+        "NumType": [
+          "Dist"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/NumType.html",
+      "section": "Dist (distributive)"
+    },
+    "example": [
+      "առաքեաց զնոսա երկուս երկուս առաջի իւր / aṙakʻeacʻ znosa erkows erkows aṙaǰi iwr “sent them two and two before his face” (Lk.10:1)."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMTYPE_MULT_MULTIPLICATIVE__01",
+    "rule_text": "Mult (multiplicative): Expresses an entity or quality which occurs a number of times.",
+    "triggers": {
+      "upos": [
+        "NUM",
+        "ADJ",
+        "DET"
+      ],
+      "feats": {
+        "NumType": [
+          "Mult"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/NumType.html",
+      "section": "Mult (multiplicative)"
+    },
+    "example": [
+      "մինչչեւ հաւու խաւսեալ իցէ. երիցս ուրասցիս զիս / minčʻčʻew hawow xawseal icʻē: ericʻs owrascʻis zis “before the cock crow, thou shalt deny me thrice” (Mt.26:34)."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMTYPE_ORD_ORDINAL__01",
+    "rule_text": "Ord (ordinal): Ordinal numerals are classified as adjectives. Except for առաջին/ aṙaǰin “first”, they are derived from cardinals with the suffix -րորդ/ -rord and -երորդ/ -erord.",
+    "triggers": {
+      "upos": [
+        "NUM",
+        "ADJ",
+        "DET"
+      ],
+      "feats": {
+        "NumType": [
+          "Ord"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/NumType.html",
+      "section": "Ord (ordinal)"
+    },
+    "example": [
+      "առաջին/ aṙaǰin “first”, երկրորդ/ erkrord “second”, հինգերորդ/ hingerord “fifth”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_NUMTYPE_SETS_COLLECTIVE_NUMERAL__01",
+    "rule_text": "Sets (collective numeral): Expresses a number of entities represented as a whole.",
+    "triggers": {
+      "upos": [
+        "NUM",
+        "ADJ",
+        "DET"
+      ],
+      "feats": {
+        "NumType": [
+          "Sets"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/NumType.html",
+      "section": "Sets (collective numeral)"
+    },
+    "example": [
+      "կոչեցեալ առ ինքն զերկոտասանեսին աշակերտսն իւր / kočʻecʻeal aṙ inkʻn zerkotasanesin ašakertsn iwr “he had called unto him all of his twelve disciples” (Mt.10:1)."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PERSON_1_FIRST_PERSON__01",
+    "rule_text": "1 (first person): The first person refers to the speaker.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Person": [
+          "1"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Person.html",
+      "section": "1 (first person)"
+    },
+    "example": [
+      "Personal pronoun: ես/ es “I”",
+      "Verb: ասեմ/ asem “I say”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PERSON_2_SECOND_PERSON__01",
+    "rule_text": "2 (second person): The second person refers to the addressee.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Person": [
+          "2"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Person.html",
+      "section": "2 (second person)"
+    },
+    "example": [
+      "Personal pronoun: դու/ dow “you”",
+      "Verb: ասես/ ases “you say”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PERSON_3_THIRD_PERSON__01",
+    "rule_text": "3 (third person): The third person refers to participants that are neither speakers nor addressees.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Person": [
+          "3"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Person.html",
+      "section": "3 (third person)"
+    },
+    "example": [
+      "Personal pronoun: իւր/ iwr “self”",
+      "Verb: ասէ/ asē “(s)he says”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_POLARITY_NEG_NEGATIVE__01",
+    "rule_text": "Neg (negative): The tag marks negative particles ոչ/ očʻ (with its allomorph չ/ čʻ ), մի/ mi “not”, and a negated copula չիք/ čʻikʻ “there is no”.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX",
+        "PART",
+        "ADV"
+      ],
+      "feats": {
+        "Polarity": [
+          "Neg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Polarity.html",
+      "section": "Neg (negative)"
+    },
+    "example": [
+      "negative particles: ոչ/ očʻ, մի/ mi “not”",
+      "negated copula: չիք / čʻikʻ/ čʻikʻ “there is no”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_POSS_YES_YES__01",
+    "rule_text": "Yes (yes): The tag marks pronominal adjectives, which express the possessive meaning.",
+    "triggers": {
+      "upos": [
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADJ",
+        "DET"
+      ],
+      "feats": {
+        "Poss": [
+          "Yes"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Poss.html",
+      "section": "Yes (yes)"
+    },
+    "example": [
+      "possessive personal determiners: իմ/ im “my”",
+      "possessive reflexive determiners: իւր/ iwr “one’s own”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_ART_ARTICLE__01",
+    "rule_text": "Art (article): Article is a special case of determiner that bears the feature of definiteness. By contrast to Modern Eastern Armenian, the Def value is marked on the article.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Art"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Art (article)"
+    },
+    "example": [
+      "մի/ mi “a/an”, =ն/ =n (enclitic) “the”."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_DEM_DEMONSTRATIVE__01",
+    "rule_text": "Dem (demonstrative): The feature characterizes demonstrative pronouns, determiners, adverbs, adpositions (grammaticalized from adverbs) and interjections. In Classical Armenian, demonstratives express a three-fold distinction of deixis.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Dem"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Dem (demonstrative)"
+    },
+    "example": [
+      "Pronoun: սա/ sa “this one”, դա/ da “that one (yours)”, նա/ na “that one”",
+      "Determiner: այս/ ays “this”, այդ/ ayd “that (yours)”, այն/ ayn “that”",
+      "Adverb/adposition: աստի/ asti “from here”, այտի/ ayti “from there”, անտի/ anti “from there”",
+      "Interjections: ահաւասիկ/ ahawasik “behold”, ահաւադիկ/ ahawadik “behold”, ահաւանիկ/ ahawanik “behold”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_IND_INDEFINITE__01",
+    "rule_text": "Ind (indefinite): Indefinite pronouns and determiners are further subclassified to distinguish “some” vs. “any” etc. by means of the Definite feature.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Ind"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Ind (indefinite)"
+    },
+    "example": [
+      "ինչ/ inčʻ “any, anything”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_INT_INTERROGATIVE__01",
+    "rule_text": "Int (interrogative): Refer to a nominal, adjectival or adverbial modifier in an interrogative clause.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Int"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Int (interrogative)"
+    },
+    "example": [
+      "Pronoun/determiner: ի / i՞նչ/ i?nčʻ “which, which one?”",
+      "Adverb: ե՞րբ/ e?rb “when”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_PRS_PERSONAL__01",
+    "rule_text": "Prs (personal): Personal pronouns can be further subdivided into personal proper, possessive and reflexive pronouns using the features Poss and Reflex.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Prs"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Prs (personal)"
+    },
+    "example": [
+      "Personal: ես/ es “I”",
+      "Possessive: իմ/ im “my”",
+      "Reflexive: իւր/ iwr “oneself”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_REL_RELATIVE__01",
+    "rule_text": "Rel (relative): Pronouns, determiners and adverbs that mark the beginning of a relative clause.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Rel"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Rel (relative)"
+    },
+    "example": [
+      "Pronoun/determiner: որ/ or “who; which”",
+      "Adverb: որպէս/ orpēs “how”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_PRONTYPE_TOT_TOTAL__01",
+    "rule_text": "Tot (total): Express every representative or all representatives of a class of entities.",
+    "triggers": {
+      "upos": [
+        "PRON",
+        "DET",
+        "ADV"
+      ],
+      "feats": {
+        "PronType": [
+          "Tot"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/PronType.html",
+      "section": "Tot (total)"
+    },
+    "example": [
+      "ամենայն/ amenayn “all”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_REFLEX_YES_YES__01",
+    "rule_text": "Yes (yes): The tag marks reflexive pronouns ինքն/ inkʻn and իւր/ iwr “self” as well as pronominal adjective իւր/ iwr “own”.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "Reflex": [
+          "Yes"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Reflex.html",
+      "section": "Yes (yes)"
+    },
+    "example": [
+      "reflexive pronouns: ինքն/ inkʻn, իւր/ iwr “self”",
+      "reflexive determiner: իւր/ iwr “own”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_TENSE_PRES_PRESENT__01",
+    "rule_text": "Pres (present): The present tense denotes events co-referential with the moment of speaking or events without a specified temporal localisation (habitual).",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Tense": [
+          "Pres"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Tense.html",
+      "section": "Pres (present)"
+    },
+    "example": [
+      "Present: ասեմ/ asem “I say; I am saying”."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_TENSE_PAST_PAST__01",
+    "rule_text": "Past (past): The past tense denotes events that happened before the moment of speaking. Classical Armenian has the perfective past, the aorist, and the imperfective past, the imperfect, which are differentiated by the aspect features Aspect=Perf and Aspect=Imp, respectively.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Tense": [
+          "Past"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Tense.html",
+      "section": "Past (past)"
+    },
+    "example": [
+      "Aorist: ասացի/ asacʻi “I said”.",
+      "Imperfect: ասեի/ asei “I was saying”."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VERBFORM_CONV_CONVERB__01",
+    "rule_text": "Conv (converb): The converb is a non-finite verb form that shares properties of verbs and adverbs. In Classical Armenian, it applies to an indeclinable predicative verbal forms in -ոց/ -ocʻ used in the analytical necessitive/future construction with the copula.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "VerbForm": [
+          "Conv"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/VerbForm.html",
+      "section": "Conv (converb)"
+    },
+    "example": [
+      "կարէ՞ք ըմպել զբաժակն զոր ես ըմպելոցն եմ / karē?kʻ əmpel zbažakn zor es əmpelocʻn em “Are ye able to drink of the cup that I shall drink of”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VERBFORM_FIN_FINITE__01",
+    "rule_text": "Fin (finite): Rule of thumb: if it has non-empty Mood, it is finite. In Classical Armenian, this applies to indicative, imperative, and subjunctive forms.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "VerbForm": [
+          "Fin"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/VerbForm.html",
+      "section": "Fin (finite)"
+    },
+    "example": [
+      "բերեմ/ berem “I carry”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VERBFORM_INF_INFINITIVE__01",
+    "rule_text": "Inf (infinitive): It appears as the argument of modal and other verbs. In Classical Armenian, one should distinguish between the indeclinable infinitive and the declinable verbal noun (see below), which is often referred to as “infinitive” in the traditional grammars.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "VerbForm": [
+          "Inf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/VerbForm.html",
+      "section": "Inf (infinitive)"
+    },
+    "example": [
+      "բերել/ berel “to carry”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VERBFORM_PART_PARTICIPLE__01",
+    "rule_text": "Part (participle): Classical Armenian has one type of participles, the past participle, which is used either in an attributive or predicative function, alone or as part of periphrastic tenses. Participles inflect for Number and Case.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "VerbForm": [
+          "Part"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/VerbForm.html",
+      "section": "Part (participle)"
+    },
+    "example": [
+      "բերեալ/ bereal “carry”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VERBFORM_VNOUN_VERBAL_NOUN__01",
+    "rule_text": "Vnoun (verbal noun): In the nominative case the verbal noun coincides with the infinitive. Its UPOS tag is VERB (not NOUN ). Adpositions and determiners apart, the dependents of verbal nouns are consistently tagged as verbal arguments and not as nominal modifiers.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "VerbForm": [
+          "Vnoun"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/VerbForm.html",
+      "section": "Vnoun (verbal noun)"
+    },
+    "example": [
+      "բերել/ berel, gen.sg. բերելոյ/ bereloy “carrying”"
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VOICE_ACT_ACTIVE_VOICE__01",
+    "rule_text": "Act (active voice): The tag Act is applied to the inflections, which mark the forms of canonical transitive verbs such as բեկանել/ bekanel ‘to break’ in the transitive construction.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Voice": [
+          "Act"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Voice.html",
+      "section": "Act (active voice)"
+    },
+    "example": [
+      "Պատրաստ արարէք զճանապարհ Տեառն: / Patrast ararēkʻ zčanaparh Teaṙn. “ Prepare ye the way of the Lord” (Luke 3:4)."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VOICE_PASS_MEDIOPASSIVE_VOICE__01",
+    "rule_text": "Pass (mediopassive voice): In Classical Armenian, the tag Pass covers a wide range of intransitive and valency-decreasing meanings such as passive, middle, and reflexive. The subject of the verb typically either spontaneously undergoes a change of state or is affected by the action carried out by an agent facultatively expressed by an oblique complement.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Voice": [
+          "Pass"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Voice.html",
+      "section": "Pass (mediopassive voice)"
+    },
+    "example": [
+      "Եւ արդարացաւ իմաստութիւն յորդւոց իւրոց: / Ew ardaracʻaw (3sg. aor.ind.pass) imastowtʻiwn yordwocʻ iwrocʻ “And yet wisdom is vindicated by all her children” (Luke 7:35)."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VOICE_CAU_CAUSATIVE__01",
+    "rule_text": "Cau (causative): The morphological causative is a derivational category in Classical Armenian. Causatives are derived from base verbs with the help of a productive valency-increasing suffix -ուց-/ -owcՙ- (or its rare variants -ուս-/ -ows- and -ուզ-/ -owz- ). A causative can be further marked by the inflectional voice. The Cau value is used for active and labile forms. Morphological causatives are typically derived from anticausative, experiential or agentive (intransitive) base verbs, while the causation of agentive transitive verbs is often expressed by the analytical causative (տալ/ tal ‘to give’ + infinitive) (Kocharov 2023).",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Voice": [
+          "Cau"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Voice.html",
+      "section": "Cau (causative)"
+    },
+    "example": [
+      "Հաւատք քո կեցուցին զքեզ. / Hawatkʻ kʻo kecʻ-owcʻ-in (3pl. aor.ind.act caus.) zkʻez. “Your faith has saved you” (Luke 7:50). The causative form is derived from a base verb կեալ/ keal “to live”."
+    ]
+  },
+  {
+    "id": "XCL_FEAT_VOICE_CAUPASS_CAUSATIVE_PASSIVE__01",
+    "rule_text": "CauPass (causative passive): The value CauPass is reserved for the mediopassive forms of the morphological causative.",
+    "triggers": {
+      "upos": [
+        "VERB",
+        "AUX"
+      ],
+      "feats": {
+        "Voice": [
+          "CauPass"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/feat/Voice.html",
+      "section": "CauPass (causative passive)"
+    },
+    "example": [
+      "Դարձուցաւ ինձ այսրէն արծաթն: / Darj-owcʻ-aw inj aysrēn arcatʻn. “My money for that has been returned.” (Gen. 42:28). The causative form is derived from a base verb դառնալ/ daṙnal “to turn”."
+    ]
+  },
+  {
+    "id": "XCL_INDEX_INDEX_TOKENIZATION_AND_WORD_SEGMENTATION_03",
+    "rule_text": "Words, containing “infixed” punctuation (e.g. question, exclamation, emphasis and abbreviation marks), as զիա՞րդ = զիարդ/ ziard + ՞ “why?”, are treated as multiword tokens and are segmented to individual syntactic words.",
+    "triggers": {
+      "lemma": [
+        "ziard"
+      ],
+      "upos": [
+        "PUNCT"
+      ],
+      "tokenization": [
+        "multiword_token"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Tokenization and Word Segmentation"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_TOKENIZATION_AND_WORD_SEGMENTATION_04",
+    "rule_text": "According to typographical rules, the following words are spelled together with a neighbouring word: proclitic adposition յ=/ y =, ց=/ cʽ = and զ=/ z = proclitic negation particle չ=/ čʽ = enclitic determiners =ս/= s, =դ/= d, =ն/= n",
+    "triggers": {
+      "lemma": [
+        "y",
+        "c",
+        "zprocliticnegationparticle",
+        "s",
+        "d",
+        "n"
+      ],
+      "tokenization": [
+        "clitic"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Tokenization and Word Segmentation"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SENTENCE_SPLITTING_01",
+    "rule_text": "A full sentence is usually concluded by the punctuation sign verjaket [ ։ ] corresponding to the English period. In case of longer sentences, the editor of a digital text may decide to split a sentence after the punctuation signs mijaket [. ], boot [ ՝ ] or storaket [, ], corresponding to the English colon, semicolon, and comma, respectively.",
+    "triggers": {
+      "deprel": [
+        "case"
+      ],
+      "upos": [
+        "PUNCT"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Sentence splitting"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_01",
+    "rule_text": "This is an overview only. For more detailed discussion and examples, follow the links below.",
+    "triggers": {
+      "meta": [
+        "overview"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_03",
+    "rule_text": "The complete list of Classical Armenian words, which must be tagged PART in UD, has to be worked out. At present, the tag is used restrictively and is applied to the following lexemes: contrasting particle: իսկ/ isk “but” dubitation particle: ապաքէն/ apakʻēn “indeed”, գուցէ/ gowcʽē “perhaps” negation particles: ոչ/ očʽ (with its proclitic variant չ=/ čʽ =) and մի/ mi",
+    "triggers": {
+      "upos": [
+        "PART"
+      ],
+      "lemma": [
+        "isk",
+        "apakʻēn",
+        "gowcʽē",
+        "očʽ",
+        "mi"
+      ],
+      "tokenization": [
+        "clitic"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_04",
+    "rule_text": "The tag DET is used for articles and adjectival pronouns with a determiner function. Pronominal quantifiers (which the traditional grammar includes in pronouns) are DET as well. The tag PRON is reserved for pronouns occurring as the head of a noun phrase.",
+    "triggers": {
+      "upos": [
+        "DET",
+        "PRON"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_05",
+    "rule_text": "The Classical Armenian auxiliaries (tagged AUX ) include: եմ/ em “to be”, its perfective counterpart լինել/ linel “to become”, չիք/ čʽikʽ “there is no”, and տալ/ tal “to give”. The auxiliaries եմ and լինել are used in the following constructions: The copula with non-verbal predicates, including predicates of location. Periphrastic past tenses: present form of եմ + past participle; imperfect form of եմ + past participle; aorist form of լինել + past participle of the main verb. Periphrastic future/subjunctive tenses: present subjunctive form of եմ + past participle; present subjunctive form of լինել + past participle; aorist subjunctive form of լինել + past participle of the main verb.",
+    "triggers": {
+      "upos": [
+        "AUX"
+      ],
+      "lemma": [
+        "em",
+        "linel",
+        "tal",
+        "čʽikʽ"
+      ],
+      "clause_type": [
+        "non_verbal"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_06",
+    "rule_text": "The auxiliary չիք is used as a negated copula.",
+    "triggers": {
+      "upos": [
+        "AUX"
+      ],
+      "lemma": [
+        "čʽikʽ"
+      ],
+      "feats": {
+        "Polarity": [
+          "Neg"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_07",
+    "rule_text": "The auxiliary տալ is used to form periphrastic causative: Periphrastic causative: any form of տալ, including periphrastic forms, + infinitive of the main verb.",
+    "triggers": {
+      "feats": {
+        "Voice": [
+          "Cau"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_08",
+    "rule_text": "Number has two values: Sing and Plur. The following parts of speech inflect for number: ADJ, DET, NOUN, NUM, PROPN, PRON, as well as the finite forms of VERB and AUX. Classical Armenian has numerous pluralia tantum nouns, the plural form of which expresses a single entity or abstract notion, cf. ապարանք/ aparankʽ “palace”, երեսք/ ereskʽ “face”, բարիք/ barikʽ “goodness”, etc.",
+    "triggers": {
+      "upos": [
+        "ADJ",
+        "AUX",
+        "DET",
+        "NOUN",
+        "NUM",
+        "PRON",
+        "PROPN",
+        "VERB"
+      ],
+      "feats": {
+        "Number": [
+          "Sing",
+          "Plur"
+        ]
+      },
+      "lemma": [
+        "aparank",
+        "eresk",
+        "barik"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_09",
+    "rule_text": "Case has seven values: Nom, Acc, Gen, Dat, Abl, Ins, Loc. It occurs with ADJ, DET, NOUN, NUM, PROPN, PRON, as well as with participles and verbal nouns, tagged VERB or AUX.",
+    "triggers": {
+      "upos": [
+        "ADJ",
+        "AUX",
+        "DET",
+        "NOUN",
+        "NUM",
+        "PRON",
+        "PROPN",
+        "VERB"
+      ],
+      "feats": {
+        "Case": [
+          "Nom",
+          "Acc",
+          "Gen",
+          "Dat",
+          "Abl",
+          "Ins",
+          "Loc"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_10",
+    "rule_text": "Deixis has three values: Prox (proximal), Med (medial), Remt (remote). It occurs with PRON, DET, ADP, ADV, INTJ.",
+    "triggers": {
+      "upos": [
+        "ADP",
+        "ADV",
+        "DET",
+        "INTJ",
+        "PRON"
+      ],
+      "feats": {
+        "Deixis": [
+          "Prox",
+          "Med",
+          "Remt"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_11",
+    "rule_text": "NumType is used with NUM ( Card, Sets ), ADJ ( Ord ) and ADV ( Mult ).",
+    "triggers": {
+      "upos": [
+        "ADJ",
+        "ADV",
+        "NUM"
+      ],
+      "feats": {
+        "NumType": [
+          "Card",
+          "Sets",
+          "Ord",
+          "Mult"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_12",
+    "rule_text": "Animacy ( Anim, Inan ) and Definite ( Def, Ind, Spec ) can be lexically expressed in PRON and DET. A semi-grammaticalized adposition զ =/ z = also takes Def, when it expresses the referentially prominent direct object.",
+    "triggers": {
+      "upos": [
+        "DET",
+        "PRON"
+      ],
+      "feats": {
+        "Animacy": [
+          "Anim",
+          "Inan"
+        ],
+        "Definite": [
+          "Def",
+          "Ind",
+          "Spec"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_13",
+    "rule_text": "Different values of PronType ( Art, Dem, Ind, Int, Prs, Rcp, Rel, Tot ) are used with PRON, DET, ADV and deictic interjections ( INTJ ).",
+    "triggers": {
+      "upos": [
+        "ADV",
+        "DET",
+        "INTJ",
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Art",
+          "Dem",
+          "Int",
+          "Prs",
+          "Rcp",
+          "Rel",
+          "Tot"
+        ],
+        "Definite": [
+          "Ind"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_14",
+    "rule_text": "Poss marks possessive personal determiners (e.g. իմ/ im “my”, իւր/ iwr “his/her own”).",
+    "triggers": {
+      "feats": {
+        "Poss": [
+          "*"
+        ]
+      },
+      "lemma": [
+        "im",
+        "iwr"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_15",
+    "rule_text": "Reflex marks reflexive pronoun իւր/ iwr (gen.sg.) “of him/her-self” and determiner իւր/ iwr (nom.sg.), իւրոյ/ iwroy “his/her own”.",
+    "triggers": {
+      "feats": {
+        "Reflex": [
+          "*"
+        ]
+      },
+      "lemma": [
+        "iwr",
+        "iwroy"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_16",
+    "rule_text": "Person is lexically expressed in personal pronouns and determiners. Only the first and second person pronouns are marked with the values 1 and 2, respectively. The third person pronoun նա/ na “(s)he, it” coincides with the demonstrative նա/ na “that” and is left unmarked. The same applies to the possessive determiners.",
+    "triggers": {
+      "feats": {
+        "Person": [
+          "1",
+          "2"
+        ]
+      },
+      "lemma": [
+        "na"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_17",
+    "rule_text": "VerbForm distinguishes five main (de)verbal forms. Although the verbal noun functions as a nominal and the past participle can be used adjectivally, they are consistently tagged VERB or AUX. Finite verb Fin, tagged VERB or AUX. Infinitive Inf, tagged VERB or AUX. Converb Conv, tagged VERB or AUX. Participle Part, tagged VERB or AUX. Verbal noun Vnoun, tagged VERB or AUX.",
+    "triggers": {
+      "upos": [
+        "AUX",
+        "VERB"
+      ],
+      "feats": {
+        "VerbForm": [
+          "Fin",
+          "Inf",
+          "Conv",
+          "Part",
+          "Vnoun"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_18",
+    "rule_text": "Person has three values ( 1, 2, 3 ), which mark the person of the verb’s subject on verbs. Classical Armenian is a pro-drop language and a personal pronoun as subject is often omitted.",
+    "triggers": {
+      "deprel": [
+        "mark"
+      ],
+      "feats": {
+        "Person": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_19",
+    "rule_text": "Aspect has two values, Imp and Perf. The aspect is defined in purely morphological terms based on the type of the verb stem, from which a verb form is derived. The aspectual semantics expressed by either of the two types of forms may not match the formal aspect.",
+    "triggers": {
+      "feats": {
+        "Aspect": [
+          "Imp",
+          "Perf"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_20",
+    "rule_text": "Finite verbs always have one of three values of Mood: Ind, Sub, or Imp.",
+    "triggers": {
+      "feats": {
+        "Mood": [
+          "Ind",
+          "Imp",
+          "Sub"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_21",
+    "rule_text": "In the indicative mood, verbs always have one of the two values of Tense: Pres or Past, which, in combination with the aforementioned aspectual values, define the three synthetic tenses, the Present, the Aorist, and the Imperfect.",
+    "triggers": {
+      "feats": {
+        "Tense": [
+          "Pres",
+          "Past"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_22",
+    "rule_text": "Sub defines the subjunctive mood, which is also used to express the Future and combines with the two aspectual values.",
+    "triggers": {
+      "feats": {
+        "Mood": [
+          "Sub"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_23",
+    "rule_text": "Imp defines the imperative, derived from a perfective stem, and the prohibitive, derived from an imperfective stem and obligatorily combined with a prohibitive particle մի/ mi; the prohibitive forms are tagged with the feature Connegative.",
+    "triggers": {
+      "feats": {
+        "Connegative": [
+          "*"
+        ],
+        "Mood": [
+          "Imp"
+        ]
+      },
+      "lemma": [
+        "mi"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_24",
+    "rule_text": "Voice has two values, Act and Pass. It characterises the oppositional inflectional voice, which is expressed only in part of the verbal paradigm. Some forms, such as the present indicative forms of the a-conjugation (գնալ/ gnal “to go”) and the first plural form of the aorist indicative (լուաք/ luakʽ “we heard”), are underspecified for voice. The Pass value defines to a wide range of valency-decreasing alternations including the passive, middle, reflexive, etc. The morphological causative is a derivational category; the active and labile forms of the causatives are tagged as Cau, whereas the mediopassive have CauPass. Note that the active and labile forms currently remain underspecified, which awaits an improvement in the UD guidelines with respect to systems, which combine the derivational and inflectional voice marking.",
+    "triggers": {
+      "feats": {
+        "Voice": [
+          "Act",
+          "Pass",
+          "Cau",
+          "CauPass"
+        ]
+      },
+      "lemma": [
+        "gnal",
+        "luak"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_25",
+    "rule_text": "Polarity feature with its Polarity=Neg value applies to negation particles ոչ/ očʽ (with its proclitic variant չ=/ čʽ =) and մի/ mi as well as a negated copula չիք/ čʻikʻ “there is no”, which has a PRON tag.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "Polarity": [
+          "Neg"
+        ]
+      },
+      "lemma": [
+        "očʽ",
+        "miaswellasanegatedcopula"
+      ],
+      "tokenization": [
+        "clitic"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_26",
+    "rule_text": "The feature Foreign is applied to foreign words, which are not loanwords.",
+    "triggers": {
+      "feats": {
+        "Foreign": [
+          "*"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_27",
+    "rule_text": "The feature ExtPos is used to head words of multiword expressions.",
+    "triggers": {
+      "feats": {
+        "ExtPos": [
+          "*"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_MORPHOLOGY_28",
+    "rule_text": "The following universal features are not used in Classical Armenian: Clusivity, Evident, Gender, NounClass, Polite.",
+    "triggers": {
+      "unused_features": [
+        "Clusivity",
+        "Evident",
+        "Gender",
+        "NounClass",
+        "Polite"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Morphology"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_02",
+    "rule_text": "Nominal subject nsubj is a noun phrase (possibly headed by a deverbal nominal) typically in the nominative case, without preposition. In the periphrastic past tenses, the subject of transitive verbs is typically coded by the genitive case and is tagged by a specialized relation obl:arg. Clausal subjects csubj are typically expressed by finite clauses, and clauses headed by infinitives or nonverbal predicates.",
+    "triggers": {
+      "deprel": [
+        "obl:arg",
+        "case",
+        "csubj"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_03",
+    "rule_text": "Objects ( obj ) are noun phrases in the accusative, which can take the proclitic determinate object marker զ=/ z =.",
+    "triggers": {
+      "deprel": [
+        "obj"
+      ],
+      "lemma": [
+        "z"
+      ],
+      "tokenization": [
+        "clitic"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_04",
+    "rule_text": "Secondary objects ( iobj ) are expressed by bare noun phrases in the dative. A functionally similar prepositional construction ց=/ cʽ = + dative is tagged as obl:arg.",
+    "triggers": {
+      "deprel": [
+        "obl:arg",
+        "iobj"
+      ],
+      "lemma": [
+        "c"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_05",
+    "rule_text": "Clausal complements are labelled ccomp, whereas open clausal complements are linked with the relation xcomp.",
+    "triggers": {
+      "deprel": [
+        "ccomp",
+        "xcomp"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_06",
+    "rule_text": "In passive clauses: the subject is labelled either nsubj:pass or csubj:pass; if the agent is present, it is typically expressed by an adpositional ablative noun phrase and is labeled obl:agent.",
+    "triggers": {
+      "deprel": [
+        "nsubj:pass",
+        "csubj:pass",
+        "obl:agent"
+      ],
+      "feats": {
+        "Voice": [
+          "Pass",
+          "CauPass"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_07",
+    "rule_text": "In causative clauses (both bare and periphrastic causative), the subject is labelled with nsubj:caus or csubj:caus.",
+    "triggers": {
+      "deprel": [
+        "nsubj:caus",
+        "csubj:caus"
+      ],
+      "feats": {
+        "Voice": [
+          "Cau"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_08",
+    "rule_text": "Other non-core arguments and adjuncts are linked to the head word by the following relations: oblique ( obl ), vocative, dislocated, advcl for clausal dependents. Arguments in the accusative that express spatial or temporal meanings are tagged as obl as well.",
+    "triggers": {
+      "deprel": [
+        "advcl",
+        "dislocated",
+        "obl",
+        "vocative"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_09",
+    "rule_text": "Nominal dependents are linked to their heads with the relations nmod, appos, nummod and acl.",
+    "triggers": {
+      "deprel": [
+        "appos",
+        "acl",
+        "nmod",
+        "nummod"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_10",
+    "rule_text": "Midifier words are linked to their heads with the relations advmod, amod, and discourse.",
+    "triggers": {
+      "deprel": [
+        "advmod",
+        "amod",
+        "discourse"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_11",
+    "rule_text": "According to UD guidelines, determiners, which can have dependencies, cannot be linked to their head with the det relation. In Classical Armenian, here belong all determiners except for enclitic articles. Therefore, pronominal adjectives and quantifiers are attached to their head with the amod relation, and only articles have the det relation.",
+    "triggers": {
+      "deprel": [
+        "amod",
+        "det"
+      ],
+      "tokenization": [
+        "clitic"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_12",
+    "rule_text": "The analytic verb forms are built with the help of auxiliaries aux. In the case of causative clauses, the auxiliary is labelled aux:caus.",
+    "triggers": {
+      "deprel": [
+        "aux:caus",
+        "aux",
+        "case"
+      ],
+      "feats": {
+        "Voice": [
+          "Cau"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_INDEX_INDEX_SYNTAX_13",
+    "rule_text": "The copula cop is used in the following non-verbal clauses: equational, attributional, locative, possessive, benefactory, existential.",
+    "triggers": {
+      "deprel": [
+        "cop"
+      ],
+      "clause_type": [
+        "non_verbal"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/index.html",
+      "section": "Syntax"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_ADJ_ADJ_ADJECTIVE__01",
+    "rule_text": "ADJ: Adjectives are words that typically modify nouns and specify their properties or attributes. Besides, they may function as predicates, cf. սուրբ է անուն նորա / sowrb ē anown nora “holy is his name” (Lk. 1:49).\nThe ADJ tag is applied to adjectives and ordinal numerals, which the traditional grammar classifies as numerals.\nAlthough participles have adjectival features they are treated as forms of the verb VERB. By contrast, the verbal adjective in -լի/ -li (e.g. սիրելի/ sireli ‘favorite’ derived from սիրել/ sirel ‘to love’) are tagged as adjectives.\nIn Classical Armenian, adjectives are declined like nouns in case and number. As a general rule, an adjective agrees with the modified noun in case and number when it follows the noun but remains in the nominative singular when it precedes the noun. In its predicative function, the adjective is typically not inflected irrespective of its position.\nClassical Armenian does not have dedicated forms of the comparative and superlative degrees of the adjective. The comparative degree can be expressed by the positive form of an adjective along with քան/ kʻan ‘than’ plus the etalon of comparison in the definite accusative form. The adjectival suffix -ագոյն/ -agoyn can express either the intensive or the comparative meaning. An adjective in -ագոյն can express the comparative alone or as part of the comparative construction with քան.\nThe superlative degree can be expressed by compounds with ամենա-/ amena-, cf. ամենա-բարի/ amena-bari ‘the best’ next to բարի/ bari ‘good’.",
+    "triggers": {
+      "upos": [
+        "ADJ"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/ADJ.html",
+      "section": "ADJ (adjective)"
+    },
+    "example": [
+      "ուրախ/ owrax “glad”",
+      "լսելի/ lseli “audible”",
+      "առաջին/ aṙaǰin “first”, երկրորդ/ erkrord “second”, չորրորդ/ čʻorrord “forth”",
+      "չար / čʻar քան / kʻan զ / z առաջինն / aṙaǰinn / čʻar kʻan z =aṙaǰin=n “worse than the first one” (Lk. 11:26)",
+      "ապա թե ոչ մինչդեռ հեռագոյն իցէ / apa tʻe očʻ minčʻdeṙ heṙagoyn icʻē “while the other is yet further off” (Lk. 14:32).",
+      "զի՞նչ իցէ մեծագոյն քան զ իմաստութիւն / zi՞nčʻ icʻē mecagoyn kʻan z =imastowtʻiwn “what is richer than wisdom?” (Wis. 8:5)."
+    ]
+  },
+  {
+    "id": "XCL_POS_ADP_ADP_ADPOSITION__01",
+    "rule_text": "ADP: Classical Armenian has prepositions, postpositions, and circumpositions. Prepositions զ=/ z=, ց=/ cʻ= and յ=/ y= (an antevocalic form of ի/ i ) are spelled together with the following word but are treated as separate tokens. \nWhen a noun phrase contains a modifier, prepositions can be repeated before each of the constituents of the noun phrase (see Meyer 2023). This occurs more often when the modifier follows the noun, in which case it is also typically inflected in case and number (see ADJ on the declension of adjectives). By convention when a noun phrase with an adnominal modifier contains only one preposition (e.g. ընդ այն ճանապարհ / ənd ayn čanaparh “by that way”), the latter is linked to the head of the noun phrase by the case relation. When the preposition is repeated (e.g. ընդ աւուրսն ընդ այնոսիկ / ənd awowrsn ənd aynosik “in those (in) days”), its instances are linked by the case relation to the nominal head and its modifier.\nComplex prepositions form multiword expressions. The status of component words is accounted for in the syntactic annotation: the subsequent word is linked to the first one by the fixed relation. All component words are tagged as ADP (even in the case of fossilized prepositional phrases).\nA special case of complex adpositions are combinations of prepositional construction with demonstrative local adverbs that reinforce the meaning of the preceding construction, cf. էջ ի լեռնէ անտի / ēǰ i leṙnē anti “he came down from the mountain” (Mt. 8:1). When used in this function, local adverbs are tagged ADP, linked to the modified nominal by the case relation, and function as constituents of circumposition. With that, they express a three-way Deixis distinction.",
+    "triggers": {
+      "upos": [
+        "ADP"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/ADP.html",
+      "section": "ADP (adposition)"
+    },
+    "example": [
+      "Prepositions: առ/ aṙ ‘to’, առ ի / aṙ i ‘in order to’",
+      "Complex prepositions:",
+      "Postpostions: հանդերձ/ handerj ‘together with’",
+      "Circumpositions։ ի լեռնէ անտի / i leṙnē anti “from that mountain”"
+    ]
+  },
+  {
+    "id": "XCL_POS_ADV_ADV_ADVERB__01",
+    "rule_text": "ADV: Adverbs are words that typically modify verbs for time, place, direction or manner. They may also modify adjectives and other adverbs.\nADV: Complex adverbs form multiword expression. The status of component words is accounted for in the syntactic annotation: the subsequent word is linked to the first one by the fixed relation. All component words are tagged as ADV (even in the case of fossilized prepositional phrases).\nADV: There is a subclass of demonstrative, relative and interrogative adverbs, which inflect for PronType. Demonstrative adverbs also inflect for Deixis.",
+    "triggers": {
+      "upos": [
+        "ADV"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/ADV.html",
+      "section": "ADV (adverb)"
+    },
+    "example": [
+      "արտաքոյ/ artakʻoy ‘outside’, կարի/ kari ‘very’, ի ծածուկ / i cacowk ‘secretly’",
+      "Pronominal adverbs",
+      "Demostrative adverbs: նոյնպէս/ noynpēs ‘in that way’",
+      "Interrogative adverbs: զիարդ/ ziard ‘why’",
+      "Relative adverbs: որպէս/ orpēs ‘in which way’"
+    ]
+  },
+  {
+    "id": "XCL_POS_CCONJ_CCONJ_COORDINATING_CONJUNCTION__01",
+    "rule_text": "CCONJ: A coordinating conjunction is a word that links words or larger constituents without syntactically subordinating one to the other and expresses a semantic relationship between them.",
+    "triggers": {
+      "upos": [
+        "CCONJ"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/CCONJ.html",
+      "section": "CCONJ (coordinating conjunction)"
+    },
+    "example": [
+      "եւ/ ew ‘and’",
+      "կամ/ kam ‘or’",
+      "բայց/ baycʻ ‘but’"
+    ]
+  },
+  {
+    "id": "XCL_POS_DET_DET_DETERMINER__01",
+    "rule_text": "DET: Determiners are words that modify nouns or noun phrases and express the reference of the noun phrase in context. That is, a determiner may indicate whether the noun is referring to a definite or indefinite element of a class, to a closer or more distant element, to an element belonging to a specified person or thing, to a particular number or quantity, etc. Under this definition, determiners include articles and pronominal adjectives. In Classical Armenian, the tag DET is used for:\ndemonstrative/possessive particles;\npronominal adjectives, including indefinite pronominal adjectives;\nquantifiers.\nAdjectival pronouns and pronominal quantifiers are traditionally included into pronouns. However, the tag PRON is reserved for pronouns occurring as the head of a noun phrase in UD. Pronominal adjectives of animate and inanimate indefinite pronouns inflect for Animacy and Definite morphological features.",
+    "triggers": {
+      "upos": [
+        "DET"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/DET.html",
+      "section": "DET (determiner)"
+    },
+    "example": [
+      "demonstrative/possessive particles: =ս / s/= s, =դ / d/= d, =ն / n/= n",
+      "pronominal adjectives, including indefinite pronominal adjectives: իմ/ im ‘my’, ոմն/ omn ‘certain’",
+      "quantifiers: մի/ mi ‘certain’, ամենայն/ amenayn ‘every’, բազում/ bazowm ‘many’"
+    ]
+  },
+  {
+    "id": "XCL_POS_INTJ_INTJ_INTERJECTION__01",
+    "rule_text": "INTJ: An interjection is a word that is used most often as an exclamation. It typically expresses an emotional reaction, is not syntactically related to other accompanying expressions, and may include a combination of sounds not otherwise found in the language.\nINTJ: In Classical Armenian, interjections can contain infixed punctuation (exclamation and emphasis marks placed on the accented syllable).\nINTJ: Classical Armenian has demonstrative interjection ահա/ aha ‘behold!’, which takes the feature PronType=Dem. This interjection has emphatic forms (աւասիկ/ awasik, աւադիկ/ awadik, աւանիկ/ awanik and ահաւասիկ/ ahawasik, ահաւադիկ/ ahawadik, ահաւանիկ/ ahawanik ), which additionally express the three-way deictic contrast (tagged as Deixis=Prox, Med, Remt ). A special case of interjections are feedback particles such as այո՛/ ayo!, ո՛չ/ očՙ!, etc.",
+    "triggers": {
+      "upos": [
+        "INTJ"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/INTJ.html",
+      "section": "INTJ (interjection)"
+    },
+    "example": [
+      "Emotive interjections: ով/ ov ‘oh!’, վահ/ vah ‘alas!’",
+      "Demonstrative interjections: ահա/ aha ‘behold!’",
+      "Feedback interjections: այո՛/ ayo!"
+    ]
+  },
+  {
+    "id": "XCL_POS_NOUN_NOUN_NOUN__01",
+    "rule_text": "NOUN: Nouns are a part of speech typically denoting a person, place, thing, animal or idea.\nThe NOUN tag is intended for common nouns only. See PROPN for proper nouns and PRON for pronouns.\nClassical Armenian nouns inflect for Case and Number.\nNote that verbal nouns and participles share properties of nouns and verbs in Classical Armenian; they are tagged VERB because they tend to have dependencies corresponding to verbal arguments.",
+    "triggers": {
+      "upos": [
+        "NOUN"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/NOUN.html",
+      "section": "NOUN (noun)"
+    },
+    "example": [
+      "աղջիկ/ ałǰik “girl”",
+      "ծառ/ caṙ “tree”",
+      "աւդ/ awd “air”"
+    ]
+  },
+  {
+    "id": "XCL_POS_NUM_NUM_NUMERAL__01",
+    "rule_text": "NUM: A numeral is a word, functioning most typically as a determiner, adjective or pronoun, that expresses a number and a relation to the number, such as quantity, sequence, frequency or fraction.\nCardinal numbers are tagged as NUM whether they are expressed by words (չորք/ čʻorkʻ “four”) or Armenian letters (Դ “four”). Following the UD guidelines, ordinal numbers are tagged as adjectives ADJ, and adverb numerals have the tag ADV.",
+    "triggers": {
+      "upos": [
+        "NUM"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/NUM.html",
+      "section": "NUM (numeral)"
+    },
+    "example": [
+      "մի/ mi “one”",
+      "Ա / A “one”",
+      "առաջին/ aṙaǰin “first” (ordinal numeral, tagged ADJ )."
+    ]
+  },
+  {
+    "id": "XCL_POS_PART_PART_PARTICLE__01",
+    "rule_text": "PART: Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech. Particles may encode grammatical categories such as negation, mood, tense etc.\nPART: In UD_Classical_Armenian-CAVaL, the tag is used restrictively when no other tag is applicable. Other words, which are termed as particles in the tranditional grammar of Classical Armenian are tageed as adverbs, determiners, and conjunctions.",
+    "triggers": {
+      "upos": [
+        "PART"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PART.html",
+      "section": "PART (particle)"
+    },
+    "example": [
+      "Emphatic particle: իսկ/ isk",
+      "Negation particle: ոչ/ očՙ (and its proclitic variant չ=/ čՙ =), մի/ mi",
+      "Mood particle: գուցէ/ gowcՙē, եթե/ etՙe (and its variant թե/ tՙe )"
+    ]
+  },
+  {
+    "id": "XCL_POS_PRON_PRON_PRONOUN__01",
+    "rule_text": "PRON: Pronouns are words that substitute for nouns or noun phrases, whose meaning is recoverable from the linguistic or extralinguistic context. In Classical Armenian, pronouns inflect for number and case. The Classical Armenian grammar traditionally extends the term pronoun to words that substitute for adjectives. Such words are tagged as DET in UD in order to annotate the same thing same way across languages. For instance, այն/ ayn “that’ is traditionally called a pronoun in the Classical Armenian grammar, regardless of context. However it can either substitute for a noun or an adjective, in which case it is tagged DET.\nPRON: Possessive, demonstrative, and interrogative pronouns with an adjectival function are classified as as determiners.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_PRS_PERSONAL",
+    "rule_text": "PRON: Personal pronouns ( PronType=Prs ): ես/ es “I”, դու/ dow “you”, etc. The third person pronoun նա/ na “(s)he, it” coincides with the demonstrative նա/ na “that”.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Prs"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_PRS_REFLEXIVE",
+    "rule_text": "PRON: Reflexive pronouns ([PronType=Prs Reflex=Yes](xcl-feat/PronType)): իւր/ iwr (gen.sg.) “of himself/herself”. The emphatic pronoun ինքն/ inkʽn and the word անձն/ anjn “person, soul, self” can also be used as reflexive pronouns, especially in the nominative and accusative, which իւր does not have.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Prs"
+        ],
+        "Reflex": [
+          "Yes"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_DEM_DEMONSTRATIVE",
+    "rule_text": "PRON: Demonstrative pronouns ( PronType=Dem ): սա/ sa “this”, դա/ da “this (yours)”, նա/ na “that”; այս/ ays “this”, այդ/ ayd “this (yours)”, այն/ ayn “that”; սոյն/ soyn “this same”, դոյն/ doyn “this (yours) same”, նոյն/ noyn “that same”.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Dem"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_RCP_RECIPROCAL",
+    "rule_text": "PRON: Reciprocal pronouns ( PronType=Rcp ): միմեանք/ mimeankʽ “one another”, իրեարք/ irearkʽ “each other”.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Rcp"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_INT_INTERROGATIVE",
+    "rule_text": "PRON: Interrogative pronouns ( PronType=Int ): ո՞վ/ ov, ո՞/ o “who?”, զի՞/ zi, զի՞նչ/ zinčʽ “what?”. The interrogative pronominal adjective (determiner) ո՞ր/ or “which?”, traditionally counted as a pronoun, is tagged (DET).",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Int"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_IND_INDEFINITE",
+    "rule_text": "PRON: Indefinite pronouns: there are two animate indefinite pronouns, ոմն/ omn “someone” and ոք/ okʻ “anyone”, an inanimate indefinite pronoun, ինչ/ inčʻ “something, anything”, and a much less frequent իմն/ imn “something”. Like in the case of parallel pairs of adverbs (երբեմն/ erbemn “at some time” and երբեք/ erbekʻ “at any time”, ուրեմն/ owremn “somewhere”, ուրեք/ owrekʻ “anywhere”, as well as unpaired ուստեք/ owstekʻ “from anywhere”), the difference in the use of the two animate indefinite pronouns can be described in terms of polarity. The negative polarity words, ending in -ք/ -kʻ, are typically used in negative, interrogative, conditional, and relative clauses. By contrast the pronouns in -մն/ -mn are typically used in affirmative main clauses and point to a specific referent (see Klein 1997). The contrast is grasped with the Definite=Ind tag for the forms in -ք/ -kʻ and Definite=Spec tag for the ones in -մն/ -mn.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Ind"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_REL_RELATIVE",
+    "rule_text": "PRON: Relative pronoun ( PronType=Rel ): որ/ or “that, which”. When the relative pronoun substitutes a noun in the relative clause and is tagged PRON, when it functions as a pronominal adjective, it is tagged DET.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Rel"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PRON_TOT_COLLECTIVE",
+    "rule_text": "PRON: Collective pronouns ( PronType=Tot ): ամենեքեան/ amenekʻean “all, everybody”, եւթնեքեան/ ewtʻnekʻean “all seven”, etc.",
+    "triggers": {
+      "upos": [
+        "PRON"
+      ],
+      "feats": {
+        "PronType": [
+          "Tot"
+        ]
+      }
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PRON.html",
+      "section": "PRON (pronoun)"
+    },
+    "example": []
+  },
+  {
+    "id": "XCL_POS_PROPN_PROPN_PROPER_NOUN__01",
+    "rule_text": "PROPN: A proper noun is a noun (or nominal content word) that is the name (or part of the name) of a specific individual, place, or object.\nPROPN: Classical Armenian proper nouns are typically written starting with an uppercase letter.",
+    "triggers": {
+      "upos": [
+        "PROPN"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/PROPN.html",
+      "section": "PROPN (proper noun)"
+    },
+    "example": [
+      "Յիսուս/ Yisows “Jesus”",
+      "Երուսաղեմ/ Erowsałem “Jerusalem”"
+    ]
+  },
+  {
+    "id": "XCL_POS_SCONJ_SCONJ_SUBORDINATING_CONJUNCTION__01",
+    "rule_text": "SCONJ: A subordinating conjunction links constructions by making one of them a constituent of the other. The subordinating conjunction typically marks the incorporated constituent which has the status of a (subordinate) clause.\nThe following types of subordinating conjunctions are found in Classical Armenian:\nComplementizers: թե/ tʻe, եթե/ etʻe “that”\nNon-pronominal relativizers: զի/ zi “that”\nNon-adverbial markers that introduce an adverbial clause: իբրեւ/ ibrew “when”, քանզի/ kʻanzi “for”, etc.\nComplex subordinating conjunctions form multiword expressions, cf. վասն զի / vasn zi “because”, որպէս զի / orpēs zi “so that”. The status of component words as multiword expressions is accounted for by the fixed relation. Both component words are tagged as SCONJ.\nFor coordinating conjunctions, see CCONJ.",
+    "triggers": {
+      "upos": [
+        "SCONJ"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/SCONJ.html",
+      "section": "SCONJ (subordinating conjunction)"
+    },
+    "example": [
+      "Complementizers: եւ իմացան թե տեսիլ ետես ի տաճարին / ew imacʻan tʻe tesil etes i tačarin “And they perceived that he had seen a vision in the temple.” (Lk. 1:22)",
+      "Non-adverbial markers that introduce an adverbial clause: եւ իբրեւ ոչ գտին. դարձան անդրէն յԵրուսաղեմ խնդրել զնա / ew ibrew očʻ gtin: darjan andrēn yErowsałem xndrel zna “And when they found him not, they turned back again to Jerusalem, seeking him.” (Lk. 2:45)",
+      "Non-pronominal relativizers: Եւ երեւեցաւ նմա հրեշտակ Տեառն զի կայր ընդ աջմէ սեղանոյ խնկոցն: / Ew erewecʻaw nma hreštak Teaṙn zi kayr ənd aǰmē sełanoy xnkocʻn. “And there appeared unto him an angel of the Lord that stood on the right side of the altar of incense.” (Lk. 1:11)"
+    ]
+  },
+  {
+    "id": "XCL_POS_VERB_VERB_VERB__01",
+    "rule_text": "VERB: A verb is a member of the syntactic class of words that typically signal events and actions, can constitute a minimal predicate in a clause, and govern the number and types of other constituents which may occur in the clause.\nNote that the VERB tag covers main verbs (content verbs), but it does not cover auxiliary verbs and copulas, for which there is the AUX tag.\nClassical Armenian verbs can have the following forms:\nFinite verb Fin (forms inflected for person)\nInfinitive Inf (uninflected form coding the secondary predication)\nConverb Conv (uninflected form with an optative meaning)\nParticiple Part (inflected past participle)\nVerbal noun Vnoun (inflected deverbal noun; the nominative counsides with the infinitive)\nAlthough the verbal noun functions as a nominal and the past participle can be used adjectivally, they are consistently tagged VERB or AUX.\nFinite verbs can be marked for: Person, Number, Aspect, Mood, Polarity, Tense, and Voice. Participles and verbal nouns have Case.",
+    "triggers": {
+      "upos": [
+        "VERB"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/VERB.html",
+      "section": "VERB (verb)"
+    },
+    "example": [
+      "Finate verb: գրեմ/ grem “I write”",
+      "Infinitive: գրել/ grel “to write”",
+      "Converb: գալոց/ galocʽ “for coming”",
+      "Participle: մտեալ/ mteal “entering”",
+      "Verbal noun: գրել/ grel “writing”"
+    ]
+  },
+  {
+    "id": "XCL_POS_X_X_OTHER__01",
+    "rule_text": "The tag X is used for words that for some reason cannot be assigned a real part-of-speech category.\nIn UD_Classical_Armenian-CAVaL, X is used for code-switching where it is not meaningful to analyze the intervening language grammatically. Such words have the morphological feature Foreign=Yes. Sequences of multiple foreign words are joined together by the flat relation.",
+    "triggers": {
+      "upos": [
+        "X"
+      ]
+    },
+    "source": {
+      "type": "ud",
+      "url": "https://universaldependencies.org/xcl/pos/X.html",
+      "section": "X (other)"
+    },
+    "example": [
+      "Եւ զինն ժամաւն գոչեաց Յիսուս ի ձայն մեծ եւ ասէ՝ էղի, էղի, ղամա սաբաքթանի ՝ այսինքն է Աստուած իմ, Աստուած իմ, ընդէ՞ր թողեր զիս: / Ew zinn žamawn goč῾eac῾ Yisows i jayn mec ew asē՝ ēłi, ēłi, łama sabak῾t῾ani ՝ aysink῾n ē Astowac im, Astowac im, əndē՞r t῾ołer zis: “And about the ninth hour Jesus cried with a loud voice, saying, Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me.”"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+conllu
+datasets
+google-genai
+peft
+sacrebleu
+sentence-transformers
+torch
+tqdm
+transformers
+trl
+vllm
+wandb
