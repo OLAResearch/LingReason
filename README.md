@@ -12,12 +12,12 @@ The `data/` directory contains generated Chintang data as examples (`xcl` data n
 
 | File | Description |
 | --- | --- |
-| `data/ctn_test_icl.json` | Test set with linguistic reasoning guides, used for ICL experiment. |
-| `data/ctn_eval.json` | Evaluation/Validation set with completed linguistic reasoning traces. |
-| `data/ctn_no_thinking_eval.json` | Evaluation/Validation set without reasoning traces. |
-| `data/ctn_train.json` | SFT/RFT training set with completed linguistic reasoning traces. |
-| `data/ctn_no_thinking_train.json` | SFT training set without reasoning traces. |
-| `data/ctn_test.json` | Test set for direct inference, without linguistic reasoning guides, used for ICL baseline as well as SFT and RFT experiments. |
+| `data/ctn_test_icl.json` | Test set with linguistic reasoning guides (with placeholders) in the prompt, used for in-context learning experiment. |
+| `data/ctn_train.json` | SFT/RFT train set with completed linguistic reasoning traces in the <think> block. |
+| `data/ctn_eval.json` | Evaluation/Validation set with completed linguistic reasoning traces in the <think> block. |
+| `data/ctn_no_thinking_train.json` | SFT Train set without linguistic reasoning traces. |
+| `data/ctn_no_thinking_eval.json` | Evaluation/Validation set without linguistic reasoning traces. |
+| `data/ctn_test.json` | Test set with completed linguistic reasoning traces in the <think> block, used for ICL baseline as well as SFT and RFT experiments. |
 
 ## Repository Structure
 
