@@ -7,6 +7,8 @@ from pathlib import Path
 
 from tqdm import tqdm
 
+from .corpus_profiles import CORPUS_PROFILES, get_corpus_profile
+
 try:
     from google import genai
     from google.genai import types
@@ -33,7 +35,12 @@ def default_output_path(input_json, model):
 
 def infer_language_code(input_json):
     stem = Path(input_json).stem
-    for language_code in ("ctn", "xcl"):
+    language_codes = sorted(
+        {profile.language_code for profile in CORPUS_PROFILES.values()},
+        key=len,
+        reverse=True,
+    )
+    for language_code in language_codes:
         if re.search(rf"(^|_){language_code}($|_)", stem):
             return language_code
     return None
@@ -129,7 +136,8 @@ def get_last_valid_index(items):
 def process_item(idx, item, args):
     prompt = item["prompt"]
     reasoning_steps = get_reasoning_steps_from_prompt(prompt)
-    if args.language_code in {"ctn", "xcl"} and reasoning_steps and "[Phrasal Translation]" not in reasoning_steps:
+    is_generic = get_corpus_profile(args.language_code).adapter == "generic"
+    if is_generic and reasoning_steps and "[Phrasal Translation]" not in reasoning_steps:
         item["generated_text"] = reasoning_steps
         item["valid_format"] = valid_format(reasoning_steps)
         item["skipped_generation"] = True
@@ -251,7 +259,7 @@ def main():
     ]
 
     print(f"Loaded {len(prompt_dicts)} prompts.")
-    print(f"Inferred language_code={args.language_code}. For ctn/xcl, cases without [Phrasal Translation] will be skipped from generation and directly returned.")
+    print(f"Inferred language_code={args.language_code}. Generic cases without [Phrasal Translation] will be returned directly.")
     print(f"Processing {len(pending_items)} prompts with concurrency={args.concurrency}.")
     print(f"Saving results to {output_json}")
 

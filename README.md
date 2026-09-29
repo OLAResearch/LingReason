@@ -4,7 +4,7 @@ LingReason contains code for generating structured linguistic reasoning traces f
 
 This repository accompanies our paper: [Reasoning over Grammar: Can Synthetic Linguistic Reasoning Traces Enhance Low-Resource Machine Translation?](https://arxiv.org/abs/2606.03782)
 
-This public release only include Chintang (`ctn`) and Classical Armenian (`xcl`). The resource files (and relevant code) for Xibe (`xcl`) are excluded due to copyright restrictions.
+This public release includes Chintang (`ctn`) and Classical Armenian (`xcl`). The resource files and relevant code for Xibe (`sjo`) are excluded due to copyright restrictions.
 
 ## Example Data
 
@@ -88,7 +88,7 @@ from lingreason.generate_sft_data import generate_sft_examples
 
 ## Resource Files
 
-Dictionary JSON files generated from UD glosses are in `dicts_generated_from_UD`.
+Dictionary JSON files generated from UD glosses can be placed in `dicts_generated_from_UD`.
 
 You can generate dictionary files from appropriate UD `.conllu` folders using:
 
@@ -97,4 +97,10 @@ python -m lingreason.generate_dict_from_ud_gloss path/to/conllu_folder --output 
 ```
 
 `gram_rules/` contains modular grammar rules paired with trigger conditions used by the trace-generation code. `gram_sketches/` contains stand-alone grammatical outline texts.
+
+## Adding a Language
+
+Corpus-specific settings are centralized in `lingreason/corpus_profiles.py`. Register a `CorpusProfile` with the source and translation metadata keys plus optional dictionary, grammar-rule, transliteration, and gloss settings. Dictionaries use `{lemma: English gloss}` JSON; they can supply trace glosses when `MISC/Gloss` is unavailable. Unknown UD labels have safe fallbacks, and grammar rules are optional.
+
+Run `python -m unittest test_corpus_profiles.py` after changing profiles.
 

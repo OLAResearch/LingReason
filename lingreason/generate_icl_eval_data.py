@@ -1,31 +1,31 @@
-from .generate_reasoning_traces_from_UD import get_reasoning_steps, get_subtree_nodes
-from .generate_sft_data import (
-    DICT_PATHS,
-    SRC_NAMES,
-    get_gold_translation,
+from .corpus_profiles import (
+    get_corpus_profile,
     get_source_text,
+    get_translation_text,
+    load_dictionary,
+)
+from .generate_reasoning_traces_from_UD import (
+    get_gloss_text,
+    get_lemma_text,
+    get_reasoning_steps,
+    get_subtree_nodes,
 )
 
 
 def component_dictionary_entries(root, language_code, sent):
-    import json
+    lemma_dict = load_dictionary(language_code)
 
-    with open(DICT_PATHS[language_code], "r", encoding="utf-8") as f:
-        lemma_dict = json.load(f)
-
-    lemmas = []
+    entries = []
+    seen_lemmas = set()
     for node in get_subtree_nodes(root):
-        if language_code == "xcl":
-            lemma = (node.token.get("misc") or {}).get("LTranslit", "_")
-        else:
-            lemma = node.token.get("lemma", "_")
-        if lemma != "_" and lemma not in lemmas:
-            lemmas.append(lemma)
+        lemma = get_lemma_text(node.token, language_code)
+        if lemma == "_" or lemma in seen_lemmas:
+            continue
+        seen_lemmas.add(lemma)
+        gloss = get_gloss_text(node.token, language_code, lemma_dict).strip()
+        entries.append(f"{lemma}: {gloss or 'not found in dictionary'}")
 
-    wordbyword = "\n".join(
-        f"{lemma}: {lemma_dict.get(lemma, 'not found in dictionary')}"
-        for lemma in lemmas
-    )
+    wordbyword = "\n".join(entries)
 
     return f"""
 Dictionary entries:
@@ -128,7 +128,8 @@ def generate_icl_eval_prompt(
         )
     )
 
-    return prompt_template_icl_reasoning(SRC_NAMES[language_code], sent, components)
+    language_name = get_corpus_profile(language_code).language_name
+    return prompt_template_icl_reasoning(language_name, sent, components)
 
 
 def generate_icl_eval_examples(
@@ -145,8 +146,8 @@ def generate_icl_eval_examples(
 
     for root in trees:
         sent_id = root.metadata["sent_id"]
-        sent = get_source_text(root, language_code)
-        gold_translation = get_gold_translation(root, language_code)
+        sent = get_source_text(root.metadata, language_code)
+        gold_translation = get_translation_text(root.metadata, language_code, required=True)
 
         examples.append({
             "sent_id": sent_id,

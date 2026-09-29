@@ -1,6 +1,13 @@
 # For the documentation about collu node, see: https://github.com/EmilStenstrom/conllu/blob/master/README.md
 from pathlib import Path
 
+from .corpus_profiles import (
+    CORPUS_PROFILES,
+    get_corpus_profile,
+    get_source_text as get_profile_source_text,
+    get_translation_text as get_profile_translation_text,
+    load_dictionary,
+)
 from .generate_dict_from_ud_gloss import clean_string
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -411,34 +418,57 @@ def get_abbrev_map(language_code):
         "ctn": abbrev_map_ctn,
         "xcl": abbrev_map_xcl,
     }
-    return abbrev_maps[language_code]
+    get_corpus_profile(language_code)
+    return abbrev_maps.get(language_code, COMMON_ABBREV_MAP)
+
+
+def describe_ud_label(label, abbrev_map):
+    """Return a readable label without failing on a new UD feature or subtype."""
+    if label in abbrev_map:
+        return abbrev_map[label]
+    if isinstance(label, str) and ":" in label:
+        base_label = label.split(":", 1)[0]
+        if base_label in abbrev_map:
+            return f"{abbrev_map[base_label]} ({label})"
+    return str(label).replace("_", " ")
 
 def get_word_text(token, language_code):
-    if language_code == "xcl":
-        return (token.get("misc") or {}).get("Translit", token["form"])
+    profile = get_corpus_profile(language_code)
+    if profile.word_misc_key:
+        return (token.get("misc") or {}).get(profile.word_misc_key, token["form"])
     return token["form"]
 
 def get_lemma_text(token, language_code):
-    if language_code == "xcl":
-        return (token.get("misc") or {}).get("LTranslit", token.get("lemma", "_"))
+    profile = get_corpus_profile(language_code)
+    if profile.lemma_misc_key:
+        return (token.get("misc") or {}).get(
+            profile.lemma_misc_key,
+            token.get("lemma", "_"),
+        )
     return token.get("lemma", "_")
 
-def get_gloss_text(token):
-    return (token.get("misc") or {}).get("Gloss") or " "
-
-def get_translation_text(metadata, language_code):
-    translation_keys = {
-        "ctn": "english",
-        "xcl": "translated_text",
-    }
-    for key in [translation_keys[language_code], "english", "translated_text"]:
-        if key in metadata:
-            return metadata[key]
+def get_gloss_text(token, language_code, lemma_dict=None):
+    profile = get_corpus_profile(language_code)
+    misc = token.get("misc") or {}
+    lemma_dict = lemma_dict or {}
+    for source in profile.gloss_sources:
+        if source == "misc" and profile.gloss_misc_key:
+            gloss = misc.get(profile.gloss_misc_key)
+            if gloss:
+                return gloss
+        elif source == "dictionary":
+            gloss = lemma_dict.get(get_lemma_text(token, language_code))
+            if gloss:
+                return gloss
     return " "
 
+def get_translation_text(metadata, language_code):
+    return get_profile_translation_text(metadata, language_code)
+
 GRAMMAR_RULE_PATHS = {
-    "ctn": PROJECT_ROOT / "gram_rules" / "gram_rules_ctn.json",
-    "xcl": PROJECT_ROOT / "gram_rules" / "gram_rules_xcl.json",
+    code: profile.grammar_rules_path
+    for code, profile in CORPUS_PROFILES.items()
+    if profile.grammar_rules_path is not None
 }
 
 _GRAMMAR_RULE_CACHE = {}
@@ -450,13 +480,22 @@ def load_grammar_rules(language_code):
     The rule files are expected to exist. Results are cached because one
     sentence can call the matching helpers many times.
     """
-    if language_code in _GRAMMAR_RULE_CACHE:
-        return _GRAMMAR_RULE_CACHE[language_code]
+    profile = get_corpus_profile(language_code)
+    if profile.language_code in _GRAMMAR_RULE_CACHE:
+        return _GRAMMAR_RULE_CACHE[profile.language_code]
+
+    path = profile.grammar_rules_path
+    if path is None:
+        return []
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Grammar rules configured for {profile.corpus_id} were not found: {path}"
+        )
 
     import json
-    with open(GRAMMAR_RULE_PATHS[language_code], "r", encoding="utf-8") as f:
+    with path.open("r", encoding="utf-8") as f:
         rules = json.load(f)
-    _GRAMMAR_RULE_CACHE[language_code] = rules
+    _GRAMMAR_RULE_CACHE[profile.language_code] = rules
     return rules
 
 def _match_feats(token_feats, rule_feats):
@@ -661,7 +700,7 @@ def get_word_grammar_notes(
     )
     if not selected:
         return []
-    language_name = {"ctn": "Chintang", "xcl": "Classical Armenian"}.get(language_code, language_code)
+    language_name = get_corpus_profile(language_code).language_name
     rule_lines = "\n".join(rule["rule_text"] for rule in selected)
     return [f"According to the grammar of {language_name}:\n{rule_lines}"]
 
@@ -688,7 +727,7 @@ def get_relation_grammar_notes(
     )
     if not selected:
         return []
-    language_name = {"ctn": "Chintang", "xcl": "Classical Armenian"}.get(language_code, language_code)
+    language_name = get_corpus_profile(language_code).language_name
     rule_lines = "\n".join(rule["rule_text"] for rule in selected)
     return [f"According to the grammar of {language_name}:\n{rule_lines}"]
 
@@ -699,6 +738,7 @@ def explain_word(
     max_grammar_rules=3,
     used_rule_ids=None,
     long_rule_once_threshold=400,
+    lemma_dict=None,
 ):
     """
     Generate explanation for a single node word, including its POS, lemma, features.
@@ -707,10 +747,10 @@ def explain_word(
     token = node.token
     word = get_word_text(token, language_code)
     lemma = get_lemma_text(token, language_code)
-    gloss = get_gloss_text(token)
+    gloss = get_gloss_text(token, language_code, lemma_dict)
 
     text = ''
-    text += f"The word '{word}' is a {abbrev_map[token['upos']]}. "
+    text += f"The word '{word}' is a {describe_ud_label(token['upos'], abbrev_map)}. "
     if word != lemma and lemma != '_':
         text += f"Its lemma form is '{lemma}', which means [{clean_string(gloss)}]. "
     if token.get('misc') and 'MSeg' in token.get('misc'):
@@ -720,14 +760,14 @@ def explain_word(
         if 'Case' in token['feats'].keys():
             k = 'Case'
             v = token['feats'][k]
-            text += f" {abbrev_map[v]} {abbrev_map[k]}"
+            text += f" {describe_ud_label(v, abbrev_map)} {describe_ud_label(k, abbrev_map)}"
         for k,v in token['feats'].items():
             if k == 'Case':
                 continue
             if v == 'Yes':
-                text += f" {abbrev_map[k]}"
+                text += f" {describe_ud_label(k, abbrev_map)}"
             else:
-                text += f" {abbrev_map[v]} {abbrev_map[k]}"
+                text += f" {describe_ud_label(v, abbrev_map)} {describe_ud_label(k, abbrev_map)}"
         text += f"."
     if grammar_rules:
         for note in get_word_grammar_notes(
@@ -780,10 +820,10 @@ def explain_syntactic_relations(
         ):
             text += f"{note}"
     if dep.token['id'] < head.token['id']:
-        text += f"\nAs the {abbrev_map[dep.token['upos']]} '{dep_word}' precedes the {abbrev_map[head.token['upos']]} '{head_word}', "
+        text += f"\nAs the {describe_ud_label(dep.token['upos'], abbrev_map)} '{dep_word}' precedes the {describe_ud_label(head.token['upos'], abbrev_map)} '{head_word}', "
     else:
-        text += f"\nAs the {abbrev_map[dep.token['upos']]} '{dep_word}' follows the {abbrev_map[head.token['upos']]} '{head_word}', "
-    text += f"the syntactic relationship here is: '{subtree_nodes_text}' is the {abbrev_map[dep.token['deprel']]} of '{head_word}'."
+        text += f"\nAs the {describe_ud_label(dep.token['upos'], abbrev_map)} '{dep_word}' follows the {describe_ud_label(head.token['upos'], abbrev_map)} '{head_word}', "
+    text += f"the syntactic relationship here is: '{subtree_nodes_text}' is the {describe_ud_label(dep.token['deprel'], abbrev_map)} of '{head_word}'."
     return text
 
 def get_reasoning_steps_with_rule_ids(
@@ -803,11 +843,12 @@ def get_reasoning_steps_with_rule_ids(
     """
     output = ''
     grammar_rules = load_grammar_rules(language_code) if include_grammar_rules else []
+    lemma_dict = load_dictionary(language_code)
     used_rule_ids = set()
     head_dependent_steps = get_head_dependent_steps(root)
     if not head_dependent_steps: # for sentences that is exactly one token, which does not have children.
         output += f"\nStep 1:"
-        output += f"\n{explain_word(root, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold)}"
+        output += f"\n{explain_word(root, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold, lemma_dict=lemma_dict)}"
         output += f"\nPutting all these pieces together, the whole sentence '{get_word_text(root.token, language_code)}' translates to: '{get_translation_text(root.metadata, language_code)}'"
         output = apply_reasoning_output_options(
             output,
@@ -817,10 +858,10 @@ def get_reasoning_steps_with_rule_ids(
         return output, used_rule_ids
     for i, (head, dependents) in enumerate(head_dependent_steps,1):
         output += f"\nStep {i}:"
-        output += f"\n{explain_word(head, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold)}"
+        output += f"\n{explain_word(head, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold, lemma_dict=lemma_dict)}"
         for dep in dependents:
             if dep.children == []:
-                output += f"\n{explain_word(dep, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold)}"
+                output += f"\n{explain_word(dep, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold, lemma_dict=lemma_dict)}"
             output += f"\n{explain_syntactic_relations(head, dep, language_code, grammar_rules, max_grammar_rules, used_rule_ids, long_rule_once_threshold)}"
         #if not the last step, print phrasal translation
         if i < len(head_dependent_steps):
@@ -857,35 +898,27 @@ def get_reasoning_steps(
     return output
 
 def generate_prompts_for_llm_fill_in_place_holders(trees, language_code):
-    import json
     # generate prompts for llm_fill_in_place_holders
-    dict_paths = {
-        "ctn": PROJECT_ROOT / "dicts_generated_from_UD" / "dict_UD_gloss_ctn.json",
-        "xcl": PROJECT_ROOT / "dicts_generated_from_UD" / "dict_UD_gloss_xcl.json",
-    }
-    with open(dict_paths[language_code], "r", encoding="utf-8") as f:
-        lemma_dict = json.load(f)
+    lemma_dict = load_dictionary(language_code)
 
     prompts = []
     for root in trees: #[0:10]: # select number of sentences
         prompt_dict = {}
         prompt_dict['sent_id'] = root.metadata['sent_id']
-        if language_code == "xcl":
-            prompt_dict['text'] = root.metadata['transliterated_text']
-        else:
-            prompt_dict['text'] = root.metadata['text']
+        prompt_dict['text'] = get_profile_source_text(root.metadata, language_code)
         prompt_dict['translation'] = get_translation_text(root.metadata, language_code)
 
-        lemmas = []
+        entries = []
+        seen_lemmas = set()
         for node in get_subtree_nodes(root):
-            if language_code == "xcl":
-                lemma = (node.token.get("misc") or {}).get("LTranslit", "_")
-            else:
-                lemma = node.token.get("lemma", "_")
-            if lemma != "_" and lemma not in lemmas:
-                lemmas.append(lemma)
+            lemma = get_lemma_text(node.token, language_code)
+            if lemma == "_" or lemma in seen_lemmas:
+                continue
+            seen_lemmas.add(lemma)
+            gloss = get_gloss_text(node.token, language_code, lemma_dict).strip()
+            entries.append(f"{lemma}: {gloss or 'not found in dictionary'}")
 
-        wordbyword = '\n'.join([f"{lemma}: {lemma_dict.get(lemma, 'not found in dictionary')}" for lemma in lemmas])
+        wordbyword = '\n'.join(entries)
         reasoning_step = get_reasoning_steps(root, language_code)
         prompt = f"""You are given dictionary entries for each individual word in a sentence, and a step-by-step reasoning process that explains how to combine the meanings of these individual words to phrases, and finally arrive at the meaning of the whole sentence. 
     Your task is to complete the reasoning steps below by filling in every placeholder enclosed in square brackets, as in [Phrasal Translation].
@@ -941,12 +974,7 @@ def filter_trees_by_max_word_len(trees, language_code, max_word_len=30):
 
     filtered_trees = []
     for root in trees:
-        if language_code == "xcl":
-            text = root.metadata.get("transliterated_text", root.metadata.get("text", ""))
-        elif language_code == "ctn":
-            text = root.metadata.get("text", "")
-        else:
-            raise ValueError(f"Unsupported language_code: {language_code}")
+        text = get_profile_source_text(root.metadata, language_code)
 
         if len(text.split()) <= max_word_len:
             filtered_trees.append(root)

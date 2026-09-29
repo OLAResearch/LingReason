@@ -1,6 +1,15 @@
 from pathlib import Path
 
+from .corpus_profiles import (
+    CORPUS_PROFILES,
+    get_corpus_profile,
+    get_source_text as get_profile_source_text,
+    get_translation_text as get_profile_translation_text,
+    load_dictionary,
+)
 from .generate_reasoning_traces_from_UD import (
+    get_gloss_text,
+    get_lemma_text,
     get_reasoning_steps_with_rule_ids,
     get_subtree_nodes,
     load_grammar_rules,
@@ -10,18 +19,20 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 SRC_NAMES = {
-    "ctn": "Chintang",
-    "xcl": "Classical Armenian",
+    code: profile.language_name
+    for code, profile in CORPUS_PROFILES.items()
 }
 
 GRAMMAR_PATHS = {
-    "ctn": PROJECT_ROOT / "gram_sketches" / "gram_sketch_ctn.txt",
-    "xcl": PROJECT_ROOT / "gram_sketches" / "gram_sketch_xcl.txt",
+    code: profile.grammar_sketch_path
+    for code, profile in CORPUS_PROFILES.items()
+    if profile.grammar_sketch_path is not None
 }
 
 DICT_PATHS = {
-    "ctn": PROJECT_ROOT / "dicts_generated_from_UD" / "dict_UD_gloss_ctn.json",
-    "xcl": PROJECT_ROOT / "dicts_generated_from_UD" / "dict_UD_gloss_xcl.json",
+    code: profile.dictionary_path
+    for code, profile in CORPUS_PROFILES.items()
+    if profile.dictionary_path is not None
 }
 
 def prompt_template(src_lang, sent, components_list=None):
@@ -65,22 +76,25 @@ Remember your source sentence is: {sent}
 def get_lemmas(root,language_code):
     lemmas = []
     for node in get_subtree_nodes(root):
-        if language_code == "xcl":
-            lemma = (node.token.get("misc") or {}).get("LTranslit", "_")
-        else:
-            lemma = node.token.get("lemma", "_")
+        lemma = get_lemma_text(node.token, language_code)
         if lemma != "_" and lemma not in lemmas:
             lemmas.append(lemma)
     return lemmas
 
 
 def component_dict_entries(language_code, root):
-    import json
-    with open(DICT_PATHS[language_code], "r", encoding="utf-8") as f:
-        lemma_dict = json.load(f)
-    lemmas = get_lemmas(root, language_code)
-    wordbyword = '\n'.join([f"{lemma}: {lemma_dict.get(lemma, 'not found in dictionary')}" for lemma in lemmas])
-    src_lang = SRC_NAMES[language_code]
+    lemma_dict = load_dictionary(language_code)
+    entries = []
+    seen_lemmas = set()
+    for node in get_subtree_nodes(root):
+        lemma = get_lemma_text(node.token, language_code)
+        if lemma == "_" or lemma in seen_lemmas:
+            continue
+        seen_lemmas.add(lemma)
+        gloss = get_gloss_text(node.token, language_code, lemma_dict).strip()
+        entries.append(f"{lemma}: {gloss or 'not found in dictionary'}")
+    wordbyword = '\n'.join(entries)
+    src_lang = get_corpus_profile(language_code).language_name
     return f"""
 For the translation task, you are given the dictionary entries for each individual word of the {src_lang} sentence.
 Some words may be polysemous and there might be multiple possible English translations. In such case, please choose the most appropriate one.
@@ -92,7 +106,10 @@ Here are the dictionary entries for each individual word in the source sentence:
 
 
 def component_grammar(language_code):
-    with open(GRAMMAR_PATHS[language_code], "r", encoding="utf-8") as f:
+    profile = get_corpus_profile(language_code)
+    if profile.grammar_sketch_path is None:
+        raise ValueError(f"No grammar sketch configured for {profile.corpus_id}")
+    with profile.grammar_sketch_path.open("r", encoding="utf-8") as f:
         grammar_sketch = f.read()
     return f"""
 You are also given this grammatical sketch below. Feel free to rely on the this grammatical sketch in your translation task:
@@ -138,7 +155,7 @@ def generate_translation_prompt(
             raise ValueError(f"Unknown grammar_mode: {grammar_mode}")
 
     template = prompt_template if thinking else prompt_template_no_thinking
-    return template(SRC_NAMES[language_code], sent, components)
+    return template(get_corpus_profile(language_code).language_name, sent, components)
 
 
 def format_sft_answer(translation, reasoning_trace=None, thinking=True):
@@ -171,17 +188,11 @@ def load_reasoning_results(results_path, valid_only=True):
 
 
 def get_source_text(root, language_code):
-    if language_code == "xcl":
-        return root.metadata["transliterated_text"]
-    if language_code == "ctn":
-        return root.metadata["text"]
-    raise ValueError(f"Unsupported language_code: {language_code}")
+    return get_profile_source_text(root.metadata, language_code)
 
 
 def get_gold_translation(root, language_code):
-    from .generate_reasoning_traces_from_UD import get_translation_text
-
-    return get_translation_text(root.metadata, language_code)
+    return get_profile_translation_text(root.metadata, language_code, required=True)
 
 
 def generate_sft_examples(
