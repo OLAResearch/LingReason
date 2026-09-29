@@ -100,5 +100,5 @@ python -m lingreason.generate_dict_from_ud_gloss path/to/conllu_folder --output 
 
 ## Adding a Language
 
-Corpus-specific settings are centralized in `lingreason/corpus_profiles.py`. Register a `CorpusProfile` with the source and translation metadata keys plus optional dictionary, grammar-rule, transliteration, and gloss settings. Dictionaries use `{lemma: English gloss}` JSON; they can supply trace glosses when `MISC/Gloss` is unavailable. Unknown UD labels have safe fallbacks, and grammar rules are optional.
+Different UD corpus may have different metadata keys, so corpus-specific settings under `lingreason/corpus_profiles.py` should be updated before adding new languages. Register a `CorpusProfile` with the source and translation metadata keys plus optional dictionary, grammar-rule, transliteration, and gloss settings. Dictionaries use `{lemma: English gloss}` JSON; they can supply trace glosses when `MISC/Gloss` is unavailable. Unknown UD labels have safe fallbacks, and grammar rules are optional.
 
