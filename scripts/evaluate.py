@@ -76,29 +76,8 @@ def evaluate_single_file(file_path, model, bleu, chrf):
     }
 
 def get_short_setting_name(file_path):
-    """Maps a result filename to a short setting label."""
-    filename = os.path.splitext(os.path.basename(file_path))[0]
-    parts = []
-
-    if "rft" in filename or "RFT" in filename:
-        parts.append("rft")
-    elif "base" in filename:
-        # parts.append("no_sft_baseline")
-        if "icl" in filename:
-            parts.append(filename.split("_")[1])  # e.g. "gemma-4-31B-it"
-            parts.append("+reasoning")
-        else:
-            parts.append(filename.split("_")[1])  # e.g. "gemma-4-31B-it"
-    elif "no_thinking" in filename:
-        parts.append("no_reasoning_baseline")
-    else:
-        parts.append("sft")
-
-    checkpoint_match = re.search(r"(?:checkpoint|ckpt)[-_](\d+)", filename)
-    if checkpoint_match:
-        parts.append(f"ckpt{checkpoint_match.group(1)}")
-
-    return "_".join(parts) if parts else os.path.basename(file_path)
+    """Use the JSON filename stem as the setting label without inferring training type."""
+    return os.path.splitext(os.path.basename(file_path))[0]
 
 def load_llm_judge_means(folder_path):
     """Loads LLM-as-a-judge means from the llm_judge summary CSV."""
